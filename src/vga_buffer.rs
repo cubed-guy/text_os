@@ -1,3 +1,6 @@
+use volatile::Volatile;
+use core::fmt;
+
 #[allow(dead_code)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
@@ -42,7 +45,7 @@ const BUFFER_WIDTH:  usize = 80;
 
 #[repr(transparent)]
 struct Buffer {
-	chars: [[ScreenChar; BUFFER_WIDTH]; BUFFER_HEIGHT],
+	chars: [[Volatile<ScreenChar>; BUFFER_WIDTH]; BUFFER_HEIGHT],
 }
 
 pub struct Writer {
@@ -64,17 +67,24 @@ impl Writer {
 				let col = self.column_position;
 
 				let color_code = self.color_code;
-				self.buffer.chars[row][col] = ScreenChar {
+				self.buffer.chars[row][col].write(ScreenChar {
 					ascii_character: byte,
 					color_code: color_code,
-				};
+				});
 				self.column_position += 1;
 			}
 		}
 	}
 
 	fn new_line(&mut self) {
-		todo!();
+		for row in 1..BUFFER_HEIGHT {
+			for col in 0..BUFFER_WIDTH {
+				let character = self.buffer.chars[row][col].read();
+				self.buffer.chars[row-1][col].write(character);
+			}
+		}
+		self.clear_row(BUFFER_HEIGHT - 1);
+		self.column_position = 0;
 	}
 
 	pub fn write_string(&mut self, string: &str) {
@@ -85,16 +95,46 @@ impl Writer {
 			}
 		}
 	}
+
+	fn clear_row(&mut self, row: usize) {
+		let blank = ScreenChar {
+			ascii_character: b' ',
+			color_code: self.color_code,
+			// color_code: ColorCode(Color::Black as u8),
+		};
+
+		for col in 0..BUFFER_WIDTH {
+			self.buffer.chars[row][col].write(blank);
+		}
+	}
 }
 
-pub fn yet_another_printer() {
-	let mut writer = Writer {
+impl fmt::Write for Writer {
+	fn write_str(&mut self, s: &str) -> fmt::Result {
+		self.write_string(s);
+		Ok(())
+	}
+}
+
+use spin::Mutex;
+lazy_static::lazy_static! {
+	pub static ref WRITER: Mutex<Writer> = Mutex::new(Writer {
 		column_position: 0,
 		color_code: ColorCode::new(Color::Black, Color::LightRed),
 		buffer: unsafe { &mut *(0xb8000 as *mut Buffer)},
-	};
-
-	writer.write_byte(b'H');
-	writer.write_string("ello, ");
-	writer.write_string("Wörld!");
+	});
 }
+
+// pub fn yet_another_printer() {
+	
+
+// 	WRITER.write_byte(b'H');
+// 	WRITER.write_string("ello, ");
+// 	WRITER.write_string("Wörld!");
+
+// 	use fmt::Write;
+
+// 	writeln!(WRITER, "The numbers are {} and {}", 42, 1.0/3.0).unwrap();
+// 	WRITER.write_string("Hello, World!");
+
+// }
