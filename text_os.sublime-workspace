@@ -1,0 +1,2752 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inner_la",
+				"inner_label:"
+			],
+			[
+				"replac",
+				"replace('\\n\\t\\t', '\\n')"
+			],
+			[
+				"hel",
+				"hello1)"
+			],
+			[
+				"arg_lab",
+				"arg_labels[0]"
+			],
+			[
+				"ter",
+				"term_label"
+			],
+			[
+				"term",
+				"term_label ="
+			],
+			[
+				"uni",
+				"uni_fill(uni_chain, label"
+			],
+			[
+				"S",
+				"Shared.debug:"
+			],
+			[
+				"E",
+				"EXPECTED')"
+			],
+			[
+				"not_",
+				"not_bounds_checked"
+			],
+			[
+				"Sh",
+				"Shared.debug:"
+			],
+			[
+				"SHared",
+				"Shared.debug:"
+			],
+			[
+				"get",
+				"getcwd()"
+			],
+			[
+				"__qual",
+				"__qualname"
+			],
+			[
+				"Sha",
+				"Shared.debug:"
+			],
+			[
+				"des",
+				"dest!r} not"
+			],
+			[
+				"elemen",
+				"element_size(label)"
+			],
+			[
+				"Sa",
+				"Shared.debug:"
+			],
+			[
+				"label",
+				"label_length"
+			],
+			[
+				"branch",
+				"branch_stack, ladder_stack"
+			],
+			[
+				"need",
+				"need_dedent = False"
+			],
+			[
+				"ladder",
+				"ladder_stack"
+			],
+			[
+				"Inde",
+				"IndentationError"
+			],
+			[
+				"prev",
+				"prev_indent"
+			],
+			[
+				"st",
+				"startswith"
+			],
+			[
+				"indent",
+				"indent_stack:"
+			],
+			[
+				"expec",
+				"expect_indent"
+			],
+			[
+				"curr_indent",
+				"curr_indent =="
+			],
+			[
+				"branch_",
+				"branch_stack"
+			],
+			[
+				"bra",
+				"branch_stack[-1]"
+			],
+			[
+				"ctrl",
+				"ctrl_stack"
+			],
+			[
+				"__Name",
+				"__Name__ == '__main"
+			],
+			[
+				"l",
+				"line_no ="
+			],
+			[
+				"size",
+				"size_n == 0:"
+			],
+			[
+				"arg",
+				"arg_name"
+			],
+			[
+				"call",
+				"call_function_wrapper"
+			],
+			[
+				"CR_O",
+				"CR_offset"
+			],
+			[
+				"inset",
+				"insert_snippet_wrapper"
+			],
+			[
+				"insert",
+				"insert_snippet_wrapper"
+			],
+			[
+				"inser",
+				"insert_snippet_wrapper"
+			],
+			[
+				"anno",
+				"annotations"
+			],
+			[
+				"test",
+				"test_against"
+			],
+			[
+				"__class__",
+				"__class__.__name__"
+			],
+			[
+				"get_from",
+				"get_from_xpath(xpath"
+			],
+			[
+				"Time",
+				"TimeoutException"
+			],
+			[
+				"except",
+				"except NoSuchElementException:"
+			],
+			[
+				"s",
+				"site-packages"
+			],
+			[
+				"option",
+				"options=options"
+			],
+			[
+				"wind",
+				"window.open('"
+			],
+			[
+				"exe",
+				"execute_script"
+			],
+			[
+				"swit",
+				"switch_tabs"
+			],
+			[
+				"Class",
+				"Class {_class!r},"
+			],
+			[
+				"__na",
+				"__name__ == '__main__':"
+			],
+			[
+				"NoS",
+				"NoSuchElementException"
+			],
+			[
+				"chromedr",
+				"chromedriver.exe')"
+			],
+			[
+				"executab",
+				"executable_path"
+			],
+			[
+				"rc",
+				"rcx, qword [top] ; if top is not a"
+			],
+			[
+				"argc",
+				"argc, char **argv"
+			],
+			[
+				"condi",
+				"condition"
+			],
+			[
+				"evalua",
+				"evaluates to"
+			],
+			[
+				"Potentiometr",
+				"Potentiometric titration"
+			],
+			[
+				"isin",
+				"isinstance(L, list):"
+			],
+			[
+				"isi",
+				"isinstance(R, list):"
+			],
+			[
+				"retur",
+				"return L"
+			],
+			[
+				"ex",
+				"except TypeError:"
+			],
+			[
+				"std",
+				"std_vector"
+			],
+			[
+				"num",
+				"num(L)"
+			],
+			[
+				"45",
+				"45 - 16:15):"
+			],
+			[
+				"file",
+				"file = sys.stderr)"
+			],
+			[
+				"Traceback",
+				"Traceback (most recent call last):"
+			],
+			[
+				"Ass",
+				"AssertionError:"
+			],
+			[
+				"exce",
+				"except ValueError: R ="
+			],
+			[
+				"int",
+				"int(L)"
+			],
+			[
+				"__repr",
+				"__repr__(self):"
+			],
+			[
+				"O",
+				"OsabieStack()"
+			],
+			[
+				"super",
+				"super(OsabieStack, self).pop(idx)"
+			],
+			[
+				"inte",
+				"intensity ="
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": ".cargo/config.toml",
+			"settings":
+			{
+				"buffer_size": 137,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					3,
+					1,
+					"insert",
+					{
+						"characters": "x"
+					},
+					"AQAAABIAAAAAAAAAEwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAEgAAAAAAAAASAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "src/main.rs",
+			"settings":
+			{
+				"buffer_size": 903,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					7,
+					1,
+					"insert",
+					{
+						"characters": "_buffer"
+					},
+					"DgAAAH4CAAAAAAAAfwIAAAAAAAAAAAAALAIAAAAAAAAtAgAAAAAAAAAAAACAAgAAAAAAAIECAAAAAAAAAAAAAC0CAAAAAAAALgIAAAAAAAAAAAAAggIAAAAAAACDAgAAAAAAAAAAAAAuAgAAAAAAAC8CAAAAAAAAAAAAAIQCAAAAAAAAhQIAAAAAAAAAAAAALwIAAAAAAAAwAgAAAAAAAAAAAACGAgAAAAAAAIcCAAAAAAAAAAAAADACAAAAAAAAMQIAAAAAAAAAAAAAiAIAAAAAAACJAgAAAAAAAAAAAAAxAgAAAAAAADICAAAAAAAAAAAAAIoCAAAAAAAAiwIAAAAAAAAAAAAAMgIAAAAAAAAzAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAACAAAALAIAAAAAAAAsAgAAAAAAAAAAAAAAAPC/fgIAAAAAAAB+AgAAAAAAAAAAAAAAQGZA"
+				],
+				[
+					14,
+					1,
+					"insert",
+					{
+						"characters": "b"
+					},
+					"AQAAAFwBAAAAAAAAXQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXAEAAAAAAABcAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"left_delete",
+					null,
+					"AQAAAGABAAAAAAAAYAEAAAAAAAABAAAAMA",
+					"AQAAAAAAAAABAAAAYQEAAAAAAABhAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					1,
+					"insert",
+					{
+						"characters": "2"
+					},
+					"AQAAAGABAAAAAAAAYQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAYAEAAAAAAABgAQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "text_os.sublime-project",
+			"settings":
+			{
+				"buffer_size": 401,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					3,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAACoAAAAAAAAAKwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKgAAAAAAAAAqAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					4,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAACsAAAAAAAAALAAAAAAAAAAAAAAALAAAAAAAAAAtAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKwAAAAAAAAArAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					5,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAAC0AAAAAAAAALwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALQAAAAAAAAAtAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"insert_completion",
+					{
+						"completion": "build_systems",
+						"format": "snippet",
+						"keep_prefix": false,
+						"must_insert": true,
+						"trigger": "build_systems"
+					},
+					"AQAAAC4AAAAAAAAAOwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALgAAAAAAAAAuAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": ":"
+					},
+					"AQAAADwAAAAAAAAAPQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPAAAAAAAAAA8AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAD0AAAAAAAAAPgAAAAAAAAAAAAAAPgAAAAAAAAA/AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPQAAAAAAAAA9AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					12,
+					1,
+					"insert_snippet",
+					{
+						"contents": "[$0]"
+					},
+					"AQAAAD8AAAAAAAAAQQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPwAAAAAAAAA/AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					13,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\n\t$0\n"
+					},
+					"AQAAAEAAAAAAAAAARQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					14,
+					1,
+					"insert_snippet",
+					{
+						"contents": "{$0}"
+					},
+					"AQAAAEMAAAAAAAAARQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQwAAAAAAAABDAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					15,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+					},
+					"BgAAAEQAAAAAAAAARQAAAAAAAAAAAAAARQAAAAAAAABHAAAAAAAAAAAAAABHAAAAAAAAAEgAAAAAAAAAAAAAAEgAAAAAAAAASgAAAAAAAAAAAAAARQAAAAAAAABFAAAAAAAAAAIAAAAJCUUAAAAAAAAASAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARAAAAAAAAABEAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					16,
+					1,
+					"insert",
+					{
+						"characters": "nm"
+					},
+					"AgAAAEgAAAAAAAAASQAAAAAAAAAAAAAASQAAAAAAAABKAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASAAAAAAAAABIAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"insert_completion",
+					{
+						"completion": "\"name\": \"$1\",",
+						"format": "snippet",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "name"
+					},
+					"AgAAAEgAAAAAAAAASAAAAAAAAAACAAAAbm1IAAAAAAAAAFMAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASgAAAAAAAABKAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					1,
+					"insert",
+					{
+						"characters": "QEMU"
+					},
+					"BAAAAFEAAAAAAAAAUgAAAAAAAAAAAAAAUgAAAAAAAABTAAAAAAAAAAAAAABTAAAAAAAAAFQAAAAAAAAAAAAAAFQAAAAAAAAAVQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUQAAAAAAAABRAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					19,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line.sublime-macro"
+					},
+					"AgAAAFcAAAAAAAAAWAAAAAAAAAAAAAAAWAAAAAAAAABbAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVQAAAAAAAABVAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					20,
+					1,
+					"insert",
+					{
+						"characters": "shel"
+					},
+					"BAAAAFsAAAAAAAAAXAAAAAAAAAAAAAAAXAAAAAAAAABdAAAAAAAAAAAAAABdAAAAAAAAAF4AAAAAAAAAAAAAAF4AAAAAAAAAXwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAWwAAAAAAAABbAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					21,
+					1,
+					"insert_completion",
+					{
+						"completion": "\"shell_cmd\": \"$1\",$0",
+						"format": "snippet",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "shell_cmd"
+					},
+					"AgAAAFsAAAAAAAAAWwAAAAAAAAAEAAAAc2hlbFsAAAAAAAAAawAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXwAAAAAAAABfAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					22,
+					1,
+					"paste",
+					null,
+					"AQAAAGkAAAAAAAAAxwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaQAAAAAAAABpAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					25,
+					2,
+					"left_delete",
+					null,
+					"AgAAAJgAAAAAAAAAmAAAAAAAAAABAAAAXJcAAAAAAAAAlwAAAAAAAAABAAAALg",
+					"AQAAAAAAAAABAAAAmQAAAAAAAACZAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					30,
+					1,
+					"insert",
+					{
+						"characters": "/"
+					},
+					"BgAAAK8AAAAAAAAAsAAAAAAAAAAAAAAAsAAAAAAAAACwAAAAAAAAAAEAAABcqQAAAAAAAACqAAAAAAAAAAAAAACqAAAAAAAAAKoAAAAAAAAAAQAAAFydAAAAAAAAAJ4AAAAAAAAAAAAAAJ4AAAAAAAAAngAAAAAAAAABAAAAXA",
+					"AQAAAAAAAAADAAAAnQAAAAAAAACeAAAAAAAAAAAAAAAAAPC/qQAAAAAAAACqAAAAAAAAAAAAAAAAAPC/rwAAAAAAAACwAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					35,
+					1,
+					"insert",
+					{
+						"characters": "C:/"
+					},
+					"AwAAAGkAAAAAAAAAagAAAAAAAAAAAAAAagAAAAAAAABrAAAAAAAAAAAAAABrAAAAAAAAAGwAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaQAAAAAAAABpAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					37,
+					1,
+					"paste",
+					null,
+					"AgAAAGkAAAAAAAAAfwAAAAAAAAAAAAAAfwAAAAAAAAB/AAAAAAAAAAMAAABDOi8",
+					"AQAAAAAAAAABAAAAbAAAAAAAAABpAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					43,
+					1,
+					"insert",
+					{
+						"characters": "/"
+					},
+					"BgAAAH4AAAAAAAAAfwAAAAAAAAAAAAAAfwAAAAAAAAB/AAAAAAAAAAEAAABceQAAAAAAAAB6AAAAAAAAAAAAAAB6AAAAAAAAAHoAAAAAAAAAAQAAAFxrAAAAAAAAAGwAAAAAAAAAAAAAAGwAAAAAAAAAbAAAAAAAAAABAAAAXA",
+					"AQAAAAAAAAADAAAAbAAAAAAAAABrAAAAAAAAAAAAAAAAAPC/eQAAAAAAAAB6AAAAAAAAAAAAAAAAAPC/fgAAAAAAAAB/AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					46,
+					1,
+					"insert",
+					{
+						"characters": "\\\""
+					},
+					"AgAAAGkAAAAAAAAAagAAAAAAAAAAAAAAagAAAAAAAABrAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaQAAAAAAAABpAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					49,
+					1,
+					"insert",
+					{
+						"characters": "\\"
+					},
+					"AQAAAJcAAAAAAAAAmAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlwAAAAAAAACXAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					50,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAAJgAAAAAAAAAmgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmAAAAAAAAACYAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					51,
+					1,
+					"right_delete",
+					null,
+					"AQAAAJkAAAAAAAAAmQAAAAAAAAABAAAAIg",
+					"AQAAAAAAAAABAAAAmQAAAAAAAACZAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					52,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line.sublime-macro"
+					},
+					"AgAAAOEAAAAAAAAA4gAAAAAAAAAAAAAA4gAAAAAAAADlAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmQAAAAAAAACZAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					55,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AgAAAOEAAAAAAAAA4gAAAAAAAAAAAAAA4wAAAAAAAADjAAAAAAAAAAMAAAAJCQk",
+					"AQAAAAAAAAABAAAA4QAAAAAAAADhAAAAAAAAAP///////+9/"
+				],
+				[
+					58,
+					1,
+					"left_delete",
+					null,
+					"AQAAAOEAAAAAAAAA4QAAAAAAAAABAAAALA",
+					"AQAAAAAAAAABAAAA4gAAAAAAAADiAAAAAAAAAAAAAAAAlJlA"
+				],
+				[
+					61,
+					1,
+					"reindent",
+					null,
+					"AQAAAOIAAAAAAAAA5QAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA4gAAAAAAAADiAAAAAAAAAP///////+9/"
+				],
+				[
+					62,
+					1,
+					"insert",
+					{
+						"characters": "wo"
+					},
+					"AgAAAOUAAAAAAAAA5gAAAAAAAAAAAAAA5gAAAAAAAADnAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5QAAAAAAAADlAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					63,
+					1,
+					"insert_completion",
+					{
+						"completion": "\"working_dir\": \"$1\",$0",
+						"format": "snippet",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "working_dir"
+					},
+					"AgAAAOUAAAAAAAAA5QAAAAAAAAACAAAAd2/lAAAAAAAAAPcAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5wAAAAAAAADnAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					64,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAPUAAAAAAAAA9gAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9QAAAAAAAAD1AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					65,
+					1,
+					"left_delete",
+					null,
+					"AQAAAPUAAAAAAAAA9QAAAAAAAAABAAAALg",
+					"AQAAAAAAAAABAAAA9gAAAAAAAAD2AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					66,
+					1,
+					"paste",
+					null,
+					"AQAAAPUAAAAAAAAAEQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9QAAAAAAAAD1AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					67,
+					1,
+					"left_delete",
+					null,
+					"AQAAABABAAAAAAAAEAEAAAAAAAABAAAAPg",
+					"AQAAAAAAAAABAAAAEQEAAAAAAAARAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					80,
+					1,
+					"insert",
+					{
+						"characters": "/"
+					},
+					"BgAAAAMBAAAAAAAABAEAAAAAAAAAAAAABAEAAAAAAAAEAQAAAAAAAAEAAABc/QAAAAAAAAD+AAAAAAAAAAAAAAD+AAAAAAAAAP4AAAAAAAAAAQAAAFz3AAAAAAAAAPgAAAAAAAAAAAAAAPgAAAAAAAAA+AAAAAAAAAABAAAAXA",
+					"AQAAAAAAAAADAAAA9wAAAAAAAAD4AAAAAAAAAAAAAAAAAPC//QAAAAAAAAD+AAAAAAAAAAAAAAAAAPC/AwEAAAAAAAAEAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					87,
+					1,
+					"insert",
+					{
+						"characters": "/"
+					},
+					"AgAAAAgBAAAAAAAACQEAAAAAAAAAAAAACQEAAAAAAAAJAQAAAAAAAAEAAABc",
+					"AQAAAAAAAAABAAAACAEAAAAAAAAJAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					92,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAABYBAAAAAAAAFwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFgEAAAAAAAAWAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					93,
+					1,
+					"insert",
+					{
+						"characters": "\nP"
+					},
+					"AwAAABcBAAAAAAAAGAEAAAAAAAAAAAAAGAEAAAAAAAAaAQAAAAAAAAAAAAAaAQAAAAAAABsBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFwEAAAAAAAAXAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					94,
+					1,
+					"left_delete",
+					null,
+					"AQAAABoBAAAAAAAAGgEAAAAAAAABAAAAUA",
+					"AQAAAAAAAAABAAAAGwEAAAAAAAAbAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					95,
+					1,
+					"insert_snippet",
+					{
+						"contents": "{$0}"
+					},
+					"AQAAABoBAAAAAAAAHAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGgEAAAAAAAAaAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					96,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+					},
+					"BgAAABsBAAAAAAAAHAEAAAAAAAAAAAAAHAEAAAAAAAAeAQAAAAAAAAAAAAAeAQAAAAAAAB8BAAAAAAAAAAAAAB8BAAAAAAAAIQEAAAAAAAAAAAAAHAEAAAAAAAAcAQAAAAAAAAIAAAAJCRwBAAAAAAAAHwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGwEAAAAAAAAbAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					97,
+					1,
+					"insert",
+					{
+						"characters": "nm"
+					},
+					"AgAAAB8BAAAAAAAAIAEAAAAAAAAAAAAAIAEAAAAAAAAhAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHwEAAAAAAAAfAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					98,
+					1,
+					"insert_completion",
+					{
+						"completion": "\"name\": \"$1\",",
+						"format": "snippet",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "name"
+					},
+					"AgAAAB8BAAAAAAAAHwEAAAAAAAACAAAAbm0fAQAAAAAAACoBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIQEAAAAAAAAhAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					99,
+					1,
+					"insert",
+					{
+						"characters": "Bootimage"
+					},
+					"CQAAACgBAAAAAAAAKQEAAAAAAAAAAAAAKQEAAAAAAAAqAQAAAAAAAAAAAAAqAQAAAAAAACsBAAAAAAAAAAAAACsBAAAAAAAALAEAAAAAAAAAAAAALAEAAAAAAAAtAQAAAAAAAAAAAAAtAQAAAAAAAC4BAAAAAAAAAAAAAC4BAAAAAAAALwEAAAAAAAAAAAAALwEAAAAAAAAwAQAAAAAAAAAAAAAwAQAAAAAAADEBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKAEAAAAAAAAoAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					100,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line.sublime-macro"
+					},
+					"AgAAADMBAAAAAAAANAEAAAAAAAAAAAAANAEAAAAAAAA3AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMQEAAAAAAAAxAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					102,
+					1,
+					"duplicate_line",
+					null,
+					"AQAAABMBAAAAAAAARAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5QAAAAAAAADlAAAAAAAAAAAAAAAAwGBA"
+				],
+				[
+					103,
+					4,
+					"swap_line_down",
+					null,
+					"CAAAAEkBAAAAAAAAegEAAAAAAAAAAAAAEwEAAAAAAAATAQAAAAAAADEAAAAJCQkid29ya2luZ19kaXIiOiAiQzovVXNlcnMvcHVuY2gvQ29kZS90ZXh0X29zIiwKTQEAAAAAAAB+AQAAAAAAAAAAAAAYAQAAAAAAABgBAAAAAAAAMQAAAAkJCSJ3b3JraW5nX2RpciI6ICJDOi9Vc2Vycy9wdW5jaC9Db2RlL3RleHRfb3MiLAplAQAAAAAAAJYBAAAAAAAAAAAAABwBAAAAAAAAHAEAAAAAAAAxAAAACQkJIndvcmtpbmdfZGlyIjogIkM6L1VzZXJzL3B1bmNoL0NvZGUvdGV4dF9vcyIsCmkBAAAAAAAAmgEAAAAAAAAAAAAANAEAAAAAAAA0AQAAAAAAADEAAAAJCQkid29ya2luZ19kaXIiOiAiQzovVXNlcnMvcHVuY2gvQ29kZS90ZXh0X29zIiwK",
+					"AQAAAAAAAAABAAAAFgEAAAAAAAAWAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					105,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAADcBAAAAAAAAOAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANwEAAAAAAAA3AQAAAAAAAAAAAAAAwGBA"
+				],
+				[
+					106,
+					1,
+					"insert_completion",
+					{
+						"completion": "\"shell_cmd\": \"$1\",$0",
+						"format": "snippet",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "shell_cmd"
+					},
+					"AgAAADcBAAAAAAAANwEAAAAAAAABAAAAczcBAAAAAAAARwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOAEAAAAAAAA4AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					107,
+					1,
+					"insert",
+					{
+						"characters": "cargo"
+					},
+					"BQAAAEUBAAAAAAAARgEAAAAAAAAAAAAARgEAAAAAAABHAQAAAAAAAAAAAABHAQAAAAAAAEgBAAAAAAAAAAAAAEgBAAAAAAAASQEAAAAAAAAAAAAASQEAAAAAAABKAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARQEAAAAAAABFAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					108,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAEoBAAAAAAAASwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASgEAAAAAAABKAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					109,
+					1,
+					"insert",
+					{
+						"characters": "bootimage"
+					},
+					"CQAAAEsBAAAAAAAATAEAAAAAAAAAAAAATAEAAAAAAABNAQAAAAAAAAAAAABNAQAAAAAAAE4BAAAAAAAAAAAAAE4BAAAAAAAATwEAAAAAAAAAAAAATwEAAAAAAABQAQAAAAAAAAAAAABQAQAAAAAAAFEBAAAAAAAAAAAAAFEBAAAAAAAAUgEAAAAAAAAAAAAAUgEAAAAAAABTAQAAAAAAAAAAAABTAQAAAAAAAFQBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASwEAAAAAAABLAQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "Bootimage",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Bootimage",
+					""
+				],
+				[
+					"QEMU",
+					""
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					""
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Automatic"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Run (with args)..."
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Check"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Test"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Test (with args)..."
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Bench"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Document"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Clippy"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Script"
+				],
+				[
+					"Packages/User/Rust.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Rust.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/Rust.sublime-build",
+					"Build & Run"
+				]
+			],
+			[
+				"Bootimage",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/CUDA C++/cuda-c++.sublime-build",
+					""
+				],
+				[
+					"Packages/CUDA C++/cuda-c++.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Ice.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Ice.sublime-build",
+					"Debug"
+				]
+			],
+			[
+				"Packages/User/Ice.sublime-build",
+				"Debug"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Ice.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Ice.sublime-build",
+					"Debug"
+				],
+				[
+					"Packages/User/Ice.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/Ice.sublime-build",
+					"Build & Assemble"
+				]
+			],
+			[
+				"Packages/User/Ice.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Ice.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Ice.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/Ice.sublime-build",
+					"Debug"
+				],
+				[
+					"Packages/User/Ice.sublime-build",
+					"Build & Run"
+				],
+				[
+					"Packages/User/Ice.sublime-build",
+					"Assemble"
+				],
+				[
+					"Packages/User/Ice.sublime-build",
+					"Assemble & Run"
+				]
+			],
+			[
+				"Packages/User/Ice.sublime-build",
+				"Debug"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Ice.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Ice.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/User/Ice.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Nasm x86.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Nasm x86.sublime-build",
+					"Build & Run"
+				],
+				[
+					"Packages/User/Nasm x86.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/Nasm x86.sublime-build",
+					"Build 64-bit"
+				],
+				[
+					"Packages/User/Nasm x86.sublime-build",
+					"Build 64-bit & Run"
+				]
+			],
+			[
+				"Packages/User/Nasm x86.sublime-build",
+				"Build 64-bit & Run"
+			]
+		],
+		[
+			[
+				[
+					"Python - ANSI Output",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Python - ANSI Output",
+				""
+			]
+		],
+		[
+			[
+				[
+					"QEMU",
+					""
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					""
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Automatic"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Run (with args)..."
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Check"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Test"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Test (with args)..."
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Bench"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Document"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Clippy"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Script"
+				],
+				[
+					"Packages/User/Rust.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Rust.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/Rust.sublime-build",
+					"Build & Run"
+				]
+			],
+			[
+				"QEMU",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Run",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Run",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"dat",
+				"Set Syntax: dat"
+			],
+			[
+				"nasm",
+				"Set Syntax: NASM x86"
+			],
+			[
+				"kbin",
+				"Preferences: Key Bindings"
+			],
+			[
+				"keyb",
+				"Preferences: Key Bindings"
+			],
+			[
+				"renam",
+				"Rename File"
+			],
+			[
+				"col",
+				"UI: Select Color Scheme"
+			],
+			[
+				"cd",
+				"Package Control: Disable Package"
+			],
+			[
+				"colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"view",
+				"View Package File"
+			],
+			[
+				"pref",
+				"Preferences: Settings"
+			],
+			[
+				"c",
+				"Code Folding: Fold"
+			],
+			[
+				"Pref",
+				"Preferences: Settings"
+			],
+			[
+				"ice",
+				"Set Syntax: Ice"
+			],
+			[
+				"inde ex",
+				"Selection: Expand to Indentation"
+			],
+			[
+				"exp inde",
+				"Selection: Expand to Indentation"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"selind",
+				"Selection: Expand to Indentation"
+			],
+			[
+				"tabs",
+				"View: Toggle Tabs"
+			],
+			[
+				"togstat",
+				"View: Toggle Status Bar"
+			],
+			[
+				"totab",
+				"View: Toggle Tabs"
+			],
+			[
+				"togg",
+				"Toggle Comment"
+			],
+			[
+				"terminus pref",
+				"Preferences: Terminus Settings"
+			],
+			[
+				"termshel",
+				"Terminus: List Shells"
+			],
+			[
+				"prefter",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				"termtogg",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"bind",
+				"Preferences: Key Bindings"
+			],
+			[
+				"termin",
+				"Preferences: Terminus Settings"
+			],
+			[
+				"tertog",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"termse",
+				"Terminus Utilities: Select Theme"
+			],
+			[
+				"term",
+				"Terminus Utilities: Select Theme"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"js",
+				"Set Syntax: JSX"
+			],
+			[
+				"sc",
+				"Set Syntax: C"
+			],
+			[
+				"tsk",
+				"Set Syntax: Tasks"
+			],
+			[
+				"plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"nest",
+				"Set Syntax: nestless"
+			],
+			[
+				"mere",
+				"Sublime Merge: Open Repository"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"lspena",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"lsp ena",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"has",
+				"Set Syntax: Haskell"
+			],
+			[
+				"hex",
+				"Set Syntax: Hex+"
+			],
+			[
+				"arithm",
+				"Arithmetic"
+			],
+			[
+				"arith",
+				"Arithmetic"
+			],
+			[
+				"keybin",
+				"Preferences: Key Bindings"
+			],
+			[
+				"relo",
+				"Snippet: Insert livereload.js script"
+			],
+			[
+				"ice syn",
+				"Set Syntax: Ice"
+			],
+			[
+				"re",
+				"Rename File"
+			],
+			[
+				"ref",
+				"Rename File"
+			],
+			[
+				"v",
+				"View Package File"
+			],
+			[
+				"icebuil",
+				"Build With: Ice - Build & Run"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"new",
+				"PackageDev: New Syntax Definition"
+			],
+			[
+				"indent",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"ansi",
+				"Set Syntax: ANSI"
+			],
+			[
+				"newsynt",
+				"PackageDev: New Syntax Definition"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"tas",
+				"Set Syntax: Tasks"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"log syn",
+				"Set Syntax: Git Log"
+			],
+			[
+				"nasm buil",
+				"Set Syntax: Sublime Text Build System (JSON)"
+			],
+			[
+				"disb",
+				"Package Control: Disable Package"
+			],
+			[
+				"to tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"indentation",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"yaml",
+				"Set Syntax: YAML"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"task",
+				"Set Syntax: Tasks"
+			],
+			[
+				"matlab",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"md",
+				"Set Syntax: TextMate Syntax Definition (YAML)"
+			],
+			[
+				"yml",
+				"Set Syntax: YAML"
+			],
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"python",
+				"Set Syntax: Python (User)"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"packa",
+				"Install Package Control"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 215.2,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": true
+	},
+	"expanded_folders":
+	[
+		"/C/Users/punch/Code/text_os"
+	],
+	"file_history":
+	[
+		"/C/Users/punch/Code/text_os/text_os.sublime-workspace",
+		"/C/Users/punch/Code/text_os/target/x64-text_os/debug/bootimage-text_os.bin",
+		"/C/Users/punch/Downloads/qemu-7.1.0/roms/u-boot/arch/x86/cpu/start.S",
+		"/C/Users/punch/Code/ice/builtins.ice-snippet",
+		"/C/Users/punch/Code/ice/Tests/ice_ref.asm",
+		"/C/Users/punch/Code/ice/Patterns.py",
+		"/C/Users/punch/Code/ice/compiler.py",
+		"/C/Users/punch/Code/ice/functions.py",
+		"/C/Users/punch/Code/ice/misc.py",
+		"/C/Users/punch/Code/ice/snippets.py",
+		"/C/Users/punch/Code/ice/Tests/unit tests 2.py",
+		"/C/Users/punch/Code/ice/Tests/tester.asm",
+		"/C/Users/punch/Code/ice/labels.py",
+		"/C/Users/punch/Code/ice/Tests/refactor tester.ice",
+		"/C/Users/punch/Documents/my_igcc_ir.c",
+		"/C/Users/punch/Documents/my_igcc.py",
+		"/C/Users/punch/Code/my_igcc_ir.c",
+		"/C/Program Files/Python39/Lib/dis.py",
+		"/C/Users/punch/Documents/wifi password",
+		"/C/Users/punch/Code/ice/Tests/refactor tester.asm",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/Python/Python.sublime-syntax",
+		"/C/Users/punch/Code/ice/Tests/aaaaaaaaaaaaaaaa",
+		"/C/Users/punch/Code/ice/archive/Todo.tsk",
+		"/C/Users/punch/Code/ice/Examples/While Demo.ice",
+		"/C/Users/punch/Code/ice/Examples/Indentation Demo.ice",
+		"/C/Users/punch/Code/ice/Examples/Demo.ice",
+		"/C/Users/punch/PES/Sem 3 ISA 5.txt",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/User/Nasm x86.sublime-syntax",
+		"/C/Users/punch/Code/ice/Examples/Indentation Demo.asm",
+		"/C/Users/punch/Code/ice/archive/C.asm",
+		"/C/Users/punch/Code/ice/archive/C.ice",
+		"/C/Users/punch/Documents/interpreter.c",
+		"/C/Users/punch/Documents/ident.jff",
+		"/C/Users/punch/Code/ice/Tests/unit tests.py",
+		"/C/Users/punch/Code/ice/Examples/Demo.asm",
+		"/C/Users/punch/Code/ice/Tests/tests.ice-snippet",
+		"/C/Users/punch/Documents/simple1 testing.py",
+		"/C/Users/punch/Documents/simple1 testing.asm",
+		"/C/Users/punch/Documents/simple_lang1.py",
+		"/C/Users/punch/Code/ice/DELETE - diff check 2.py",
+		"/C/Users/punch/Code/ice/DELETE - diff check.py",
+		"/C/Users/punch/Code/ice/Tests/<test IO String>",
+		"/C/Users/punch/Code/ice/Tests/Examples/Demo.ice",
+		"/C/Users/punch/PES/PLY/go2.py",
+		"/C/Users/punch/PES/PLY/go1.py",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/Terminus/Default.sublime-keymap",
+		"/C/Users/punch/PES/PLY/go1",
+		"/C/Users/punch/PES/DDCO_Quiz questions.txt",
+		"/C/Users/punch/PES/Data Structures/Lab 10/Lab10-DSA-boilerplate.c",
+		"/C/Users/punch/Code/ice/tester.asm",
+		"/C/Users/punch/Code/ice/Examples/While Demo.asm",
+		"/C/Users/punch/AppData/Local/Temp/unknown.nasm",
+		"/C/Users/punch/Code/ice/Tests/hello.ice",
+		"/C/Users/punch/Documents/timers.txt",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/User/Ice.sublime-build",
+		"/C/Users/punch/Documents/bin_search.asm",
+		"/C/Users/punch/Documents/bin_search.c",
+		"/C/Users/punch/Documents/bin_search.s",
+		"/C/Users/punch/Documents/bin_search.sl1",
+		"/C/Users/punch/Code/ice/Tests/out_size tester.ice",
+		"/C/Users/punch/Code/ice/Tests/out_size tester.asm",
+		"/C/Users/punch/Code/ice/ice.sublime-build",
+		"/C/Users/punch/Code/ice/Tests/deref.asm",
+		"/C/Users/punch/Code/ice/Tests/deref.ice",
+		"/C/Users/punch/Code/ice/README.md",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/User/Ice.sublime-syntax",
+		"/C/Users/punch/Code/ice/Tests/Tests/refactor tester.ice",
+		"/C/Users/punch/Code/Leet/heap_sort.c",
+		"/C/Users/punch/Code/ice/Examples/Hash Map.ice",
+		"/C/Users/punch/Code/ice/Tests/loop tester.ice",
+		"/C/Users/punch/PES/Web Technologies/forms.html",
+		"/C/Users/punch/Code/Leet/stamp.py",
+		"/C/Users/punch/Code/Leet/main.py",
+		"/C/Users/punch/Code/ice/Tests/if tester.asm",
+		"/C/Program Files/mingw-w64/version_info.txt",
+		"/C/Users/punch/PES/Data Structures/Lab 1/PES2UG21CS477_2.c",
+		"/C/Users/punch/Code/ice/Tests/while tester.asm",
+		"/C/Users/punch/Code/ice/Tests/while tester.ice",
+		"/C/Users/punch/Code/ice/archive/V.asm",
+		"/C/Users/punch/Code/ice/archive/V.ice",
+		"/C/Users/punch/Documents/-felf64",
+		"/C/Users/punch/Code/ice/Tests/hello.asm",
+		"/C/Users/punch/Code/cookies/pes.py",
+		"/C/Users/punch/Code/ice/Examples/Test file.ice",
+		"/C/Users/punch/Code/XP/testing suite.py",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/User/Celeste Dark.sublime-color-scheme",
+		"/C/Users/punch/Code/ice/ice.sublime-project",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/User/ANSI Colours.sublime-syntax",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/User/ANSIescape/ansi.sublime-color-scheme",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/Makefile/Makefile.sublime-syntax",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/ANSIescape/ansi.sublime-settings",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/Python/Python.sublime-build",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/ANSIescape/README.md",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/ANSIescape/ANSI.sublime-syntax",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/Makefile/Make.sublime-build",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/Makefile/Make Output.sublime-syntax",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/Makefile/Makefile.sublime-settings",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/Makefile.sublime-package",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Installed Packages/ANSIescape.sublime-package",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/User/Nasm x86.sublime-build",
+		"/C/Users/punch/Code/ice/Tests/Readme.md",
+		"/C/Users/punch/Code/mingww/mingw-w64-v10.0.0/config.log",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/Git Formats/Git Log.sublime-syntax",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/Git Formats/Git Log.sublime-settings",
+		"/C/Users/punch/Code/nasm.asm",
+		"/C/Users/punch/Code/nasm_hi.asm",
+		"/C/Users/punch/Code/ice/Tests/stringio tests.py",
+		"/C/Users/punch/Code/ice/.gitignore",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/C++/C++ Single File.sublime-build",
+		"/C/Users/punch/Code/ice/Examples/refacor tester.ice",
+		"/C/Users/punch/Code/ice/Examples/refacor tester.asm",
+		"/C/Users/punch/Documents/GPU Exercises.txt",
+		"/C/Users/punch/Documents/functions.nasm",
+		"/C/Users/punch/Documents/functions copy.nasm",
+		"/C/Users/punch/Documents/copy.nasm",
+		"/C/Users/punch/Code/ice/Examples/hello.asm",
+		"/C/Users/punch/Documents/Timers.pyw",
+		"/C/Users/punch/Code/cookies/t.c",
+		"/C/Users/punch/Code/cookies/t.s",
+		"/C/Users/punch/Code/cookies/t.i",
+		"/C/Users/punch/Code/cookies/how_headless.txt",
+		"/C/Users/punch/AppData/Roaming/Sublime Text/Packages/User/nasm.sublime-snippet",
+		"/C/Users/punch/OneDrive/Desktop/golfed asm.md",
+		"/C/Users/punch/OneDrive/Desktop/modulus.s",
+		"/C/Users/punch/OneDrive/Desktop/modulus.c",
+		"/C/Program Files/WindowsApps/Microsoft.WindowsTerminal_1.13.11432.0_x64__8wekyb3d8bbwe/defaults.json",
+		"/C/Users/punch/Code/XP/commands.yaml",
+		"/C/Users/punch/Code/Editor/Editor.c"
+	],
+	"find":
+	{
+		"height": 33.6
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"",
+			"./*.py"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"\\",
+			"in a register",
+			"snippets\\.get_label",
+			"get_label",
+			"replace\\('\\$'",
+			"not yet de",
+			"decode_args",
+			"if Shared.debug: print('LABEL STACK:', labels)",
+			"Shared",
+			"DECL ONLY",
+			"INDENT",
+			"dedents",
+			"dedent",
+			"label_level.*?=",
+			"label_level",
+			"\\)\\..*?label",
+			"\\)\\.get_",
+			"\\)\\.get_label",
+			"get_label",
+			"set_label",
+			"POP_JUMP_IF",
+			"var",
+			"dedent",
+			"s",
+			"adref",
+			"get_size",
+			"\\blabel is\\b",
+			"label is",
+			"\"",
+			"new_test",
+			"\\bmov\\b",
+			"mov",
+			"str",
+			"3",
+			"gt",
+			"free",
+			"malloc",
+			".",
+			"x",
+			"bin_op or ter",
+			"\\blabel\\b",
+			"label",
+			"exit",
+			"term_label",
+			"Function",
+			"arg_label",
+			"inner_label",
+			"Incompa",
+			"get_size_n",
+			"label",
+			"vs",
+			"uni_fill",
+			"\\blabel\\b",
+			"output",
+			"arg_label",
+			"imm = var",
+			"131071",
+			"STATE",
+			"term_label",
+			"exp_label",
+			"label",
+			"enc_op",
+			"suffix_op",
+			"enc_op",
+			"inner_label",
+			"subj_label",
+			"label",
+			"\\blabel\\b",
+			"exp_label",
+			"label",
+			"keyword\\.operator",
+			"\\.operator",
+			"label",
+			"exp_label",
+			"b_label",
+			"arg",
+			"arg_label",
+			"Cannot cast",
+			"enc_op",
+			"functions",
+			"label",
+			"imm = var",
+			"edge",
+			"13: ",
+			"13.*\\n; ERR",
+			"ERROR",
+			"neg",
+			"uni_chain",
+			"CAST",
+			"ARGS",
+			"CALL",
+			"GOT VAR",
+			"PARSE",
+			"STATE",
+			"CAST",
+			"UNI",
+			"TOKEN",
+			"print\\(f'  ",
+			"y = -",
+			"print",
+			"itfile",
+			"isidentifier",
+			"ERROR",
+			"assert",
+			"STATE",
+			"unary",
+			"unis",
+			"assert",
+			"\\blabel = ",
+			"assert",
+			"\\blabel = ",
+			"label = ",
+			"GOT",
+			"label",
+			"arg_label",
+			"CALL",
+			"snippet",
+			"STATE",
+			"PARSE",
+			"ARG",
+			"PARSE",
+			"token",
+			"ASN",
+			"sentinel",
+			"EXPECTED",
+			"little",
+			"big",
+			"True"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"''))\n"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": ".cargo/config.toml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36,
+								36
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///C:/Users/punch/Code/text_os/.cargo/config.toml",
+							"syntax": "Packages/TOML/TOML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/main.rs",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								352,
+								352
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///C:/Users/punch/Code/text_os/src/main.rs",
+							"syntax": "Packages/Rust Enhanced/RustEnhanced.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 66.4,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "text_os.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 401,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								340,
+								340
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///C:/Users/punch/Code/text_os/text_os.sublime-project",
+							"syntax": "Packages/PackageDev/Package/Sublime Text Project/Sublime Text Project.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.6
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.LSP Log Panel":
+	{
+		"height": 0.0
+	},
+	"output.Terminus":
+	{
+		"height": 371.0
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 230.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "text_os.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"main",
+				"src\\main.rs"
+			],
+			[
+				"ir",
+				"Tests\\ice_ref.asm"
+			],
+			[
+				"snip",
+				"snippets.py"
+			],
+			[
+				"label",
+				"labels.py"
+			],
+			[
+				"pater",
+				"Patterns.py"
+			],
+			[
+				"com",
+				"C:\\Users\\punch\\Code\\ice\\compiler.py"
+			],
+			[
+				"buil",
+				"builtins.ice-snippet"
+			],
+			[
+				"tes",
+				"Tests\\refactor tester.ice"
+			],
+			[
+				"u",
+				"Tests\\unit tests 2.py"
+			],
+			[
+				"m",
+				"misc.py"
+			],
+			[
+				"s",
+				"snippets.py"
+			],
+			[
+				"c",
+				"compiler.py"
+			],
+			[
+				"sni",
+				"snippets.py"
+			],
+			[
+				"compil",
+				"compiler.py"
+			],
+			[
+				"snipe",
+				"snippets.py"
+			],
+			[
+				"misc",
+				"misc.py"
+			],
+			[
+				"built",
+				"builtins.ice-snippet"
+			],
+			[
+				"icr",
+				"Tests\\ice_ref.asm"
+			],
+			[
+				"iceref",
+				"Tests\\ice_ref.asm"
+			],
+			[
+				"ref",
+				"Tests\\refactor tester.asm"
+			],
+			[
+				"func",
+				"functions.py"
+			],
+			[
+				"pat",
+				"Patterns.py"
+			],
+			[
+				"fun",
+				"functions.py"
+			],
+			[
+				"builtin",
+				"builtins.ice-snippet"
+			],
+			[
+				"while",
+				"Examples\\While Demo.ice"
+			],
+			[
+				"exampleice",
+				"Examples\\Indentation Demo.ice"
+			],
+			[
+				"demo",
+				"Examples\\Demo.ice"
+			],
+			[
+				"builti",
+				"builtins.ice-snippet"
+			],
+			[
+				"snipp",
+				"snippets.py"
+			],
+			[
+				"indent",
+				"Examples\\Indentation Demo.ice"
+			],
+			[
+				"tests",
+				"Tests\\unit tests 2.py"
+			],
+			[
+				"casm",
+				"archive\\C.asm"
+			],
+			[
+				"indeice",
+				"Examples\\Indentation Demo.ice"
+			],
+			[
+				"snipep",
+				"snippets.py"
+			],
+			[
+				"",
+				"untitled"
+			],
+			[
+				"icref",
+				"Tests\\ice_ref.asm"
+			],
+			[
+				"tasm",
+				"Tests\\tester.asm"
+			],
+			[
+				"uni2",
+				"Tests\\unit tests 2.py"
+			],
+			[
+				"unit",
+				"Tests\\unit tests.py"
+			],
+			[
+				"labels",
+				"labels.py"
+			],
+			[
+				"un2",
+				"Tests\\unit tests 2.py"
+			],
+			[
+				"indede",
+				"Examples\\Indentation Demo.ice"
+			],
+			[
+				"comp",
+				"compiler.py"
+			],
+			[
+				"demoasm",
+				"Examples\\Demo.asm"
+			],
+			[
+				"demoi",
+				"Examples\\Demo.ice"
+			],
+			[
+				"icerefas",
+				"Tests\\ice_ref.asm"
+			],
+			[
+				"tester",
+				"Tests\\tester.asm"
+			],
+			[
+				"teas",
+				"Tests\\tester.asm"
+			],
+			[
+				"ice",
+				"Examples\\Demo.ice"
+			],
+			[
+				"testerasm",
+				"tester.asm"
+			],
+			[
+				"snippe",
+				"Tests\\tests.ice-snippet"
+			],
+			[
+				"fucntion",
+				"functions.py"
+			],
+			[
+				"uni",
+				"Tests\\unit tests.py"
+			],
+			[
+				"whilic",
+				"Examples\\While Demo.ice"
+			],
+			[
+				"patter",
+				"Patterns.py"
+			],
+			[
+				"whilasm",
+				"Examples\\While Demo.asm"
+			],
+			[
+				"demoic",
+				"Examples\\Demo.ice"
+			],
+			[
+				"compi",
+				"compiler.py"
+			],
+			[
+				"pate",
+				"Patterns.py"
+			],
+			[
+				"dem",
+				"Examples\\Demo.ice"
+			],
+			[
+				"wdas",
+				"Examples\\While Demo.asm"
+			],
+			[
+				".ice",
+				"Examples\\While Demo.ice"
+			],
+			[
+				"t",
+				"archive\\Todo.tsk"
+			],
+			[
+				"demasm",
+				"Examples\\Demo.asm"
+			],
+			[
+				"la",
+				"labels.py"
+			],
+			[
+				"inasm",
+				"Examples\\Indentation Demo.asm"
+			],
+			[
+				"mis",
+				"misc.py"
+			],
+			[
+				"demo asm",
+				"Examples\\Demo.asm"
+			],
+			[
+				"out",
+				"Tests\\out_size tester.asm"
+			],
+			[
+				"function",
+				"functions.py"
+			],
+			[
+				"todo",
+				"archive\\Todo.tsk"
+			],
+			[
+				"indedemasm",
+				"Examples\\Indentation Demo.asm"
+			],
+			[
+				"deice",
+				"Examples\\Indentation Demo.ice"
+			],
+			[
+				"reftasm",
+				"Tests\\refactor tester.asm"
+			],
+			[
+				"refice",
+				"C:\\Users\\punch\\Code\\ice\\Tests\\Tests\\refactor tester.ice"
+			],
+			[
+				"reice",
+				"Tests\\refactor tester.ice"
+			],
+			[
+				"test",
+				"Tests\\refactor tester.ice"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"dereasm",
+				"Tests\\deref.asm"
+			],
+			[
+				"inden",
+				"Examples\\Indentation Demo.ice"
+			],
+			[
+				"examplesice",
+				"Examples\\Hash Map.ice"
+			],
+			[
+				"examples\\",
+				"Examples\\Indentation Demo.ice"
+			],
+			[
+				"indi",
+				"Examples\\Indentation Demo.ice"
+			],
+			[
+				"readm",
+				"README.md"
+			],
+			[
+				"inde",
+				"Examples\\Indentation Demo.ice"
+			],
+			[
+				"indeasm",
+				"Examples\\Indentation Demo.asm"
+			],
+			[
+				"whdemi",
+				"Examples\\While Demo.ice"
+			],
+			[
+				"whdem",
+				"Examples\\While Demo.asm"
+			],
+			[
+				"builic",
+				"builtins.ice-snippet"
+			],
+			[
+				"vasm",
+				"archive\\V.asm"
+			],
+			[
+				"vice",
+				"archive\\V.ice"
+			],
+			[
+				"whdasm",
+				"Examples\\While Demo.asm"
+			],
+			[
+				"wasm",
+				"Tests\\while tester.asm"
+			],
+			[
+				"labl",
+				"labels.py"
+			],
+			[
+				"whilea",
+				"Tests\\while tester.asm"
+			],
+			[
+				"buic",
+				"builtins.ice-snippet"
+			],
+			[
+				"testicesni",
+				"Tests\\tests.ice-snippet"
+			],
+			[
+				"bsni",
+				"builtins.ice-snippet"
+			],
+			[
+				"ic",
+				"C:\\Users\\punch\\AppData\\Roaming\\Sublime Text\\Packages\\User\\Ice.sublime-build"
+			],
+			[
+				"ra",
+				"Tests\\refactor tester.asm"
+			],
+			[
+				"cm",
+				"compiler.py"
+			],
+			[
+				"bic",
+				"builtins.ice-snippet"
+			],
+			[
+				"snippet",
+				"Tests\\tests.ice-snippet"
+			],
+			[
+				"heli",
+				"Tests\\hello.ice"
+			],
+			[
+				"hello",
+				"Tests\\hello.asm"
+			],
+			[
+				"bice",
+				"builtins.ice-snippet"
+			],
+			[
+				"snippets",
+				"snippets.py"
+			],
+			[
+				"refac",
+				"Tests\\refactor tester.ice"
+			],
+			[
+				"testsnip",
+				"Tests\\tests.ice-snippet"
+			],
+			[
+				"read",
+				"Tests\\Readme.md"
+			],
+			[
+				"rasm",
+				"Tests\\refactor tester.asm"
+			],
+			[
+				"refacto",
+				"Tests\\refactor tester.ice"
+			],
+			[
+				"bu",
+				"builtins.ice-snippet"
+			],
+			[
+				"refasm",
+				"Tests\\refacor tester.asm"
+			],
+			[
+				"refa",
+				"Tests\\refacor tester.ice"
+			],
+			[
+				"reftester",
+				"Examples\\refacor tester.asm"
+			],
+			[
+				"xp",
+				"XP.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ddc",
+				"C:\\Users\\punch\\Code\\ddco-project\\ddco-project.sublime-project"
+			],
+			[
+				"ice",
+				"C:\\Users\\punch\\Code\\ice\\ice.sublime-project"
+			],
+			[
+				"fla",
+				"C:\\Users\\punch\\Code\\flappio\\flappio.sublime-project"
+			],
+			[
+				"",
+				"C:\\Users\\punch\\Code\\MCCAA\\MCCAA.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 223.2,
+		"last_filter": "getlabel",
+		"selected_items":
+		[
+			[
+				"getlabel",
+				"get_label"
+			],
+			[
+				"getargl",
+				"get_arg_labels"
+			],
+			[
+				"codege",
+				"codegen"
+			],
+			[
+				"assig",
+				"assign"
+			],
+			[
+				"asi",
+				"assign"
+			],
+			[
+				"parse",
+				"parse"
+			],
+			[
+				"assi",
+				"assign"
+			],
+			[
+				"err",
+				"err"
+			],
+			[
+				"label",
+				"Label"
+			],
+			[
+				"setlabe",
+				"set_label"
+			],
+			[
+				"getreg",
+				"get_reg"
+			],
+			[
+				"shared",
+				"Shared"
+			],
+			[
+				"declare",
+				"declare"
+			],
+			[
+				"snippets",
+				"set_snippets"
+			],
+			[
+				"setsnipp",
+				"set_snippets"
+			],
+			[
+				"call",
+				"call"
+			],
+			[
+				"getcla",
+				"get_clause"
+			],
+			[
+				"getclaus",
+				"get_clause"
+			],
+			[
+				"assign",
+				"assign"
+			],
+			[
+				"encode",
+				"encode"
+			],
+			[
+				"reg",
+				"Register"
+			],
+			[
+				"clause",
+				"get_clause"
+			],
+			[
+				"gee",
+				"get_reg"
+			],
+			[
+				"",
+				"err"
+			]
+		],
+		"width": 574.4
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 272.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

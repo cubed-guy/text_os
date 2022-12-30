@@ -1,0 +1,26 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "QEMU",
+			"shell_cmd": "\"C:/Program Files/qemu/qemu-system-x86_64.exe\" -drive format=raw,file=target/x64-text_os/debug/bootimage-text_os.bin",
+			"working_dir": "C:/Users/punch/Code/text_os",
+		},
+		{
+			"name": "Bootimage",
+			"shell_cmd": "cargo bootimage",
+			"working_dir": "C:/Users/punch/Code/text_os",
+		},
+		// {
+		// 	"name": "OS - Build & Run",
+		// 	"shell_cmd": "cargo bootimage && \"C:/Program Files/qemu/qemu-system-x86_64.exe\" -drive format=raw,file=target/x64-text_os/debug/bootimage-text_os.bin",
+		// 	"working_dir": "C:/Users/punch/Code/text_os",
+		// }
+	]
+}
