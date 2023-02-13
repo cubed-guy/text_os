@@ -46,21 +46,19 @@ fn panic(info: &PanicInfo) -> ! {
 
 
 #[cfg(test)]
-fn test_runner(tests: &[&dyn Fn()]) {
+fn test_runner(tests: &[&dyn Testable]) {
     if tests.len() != 1 { serial_println!("Running {} tests!", tests.len()) }
     else { serial_println!("Running 1 test!") }
 
     for test in tests {
-        test();
+        test.run();
     }
     exit_qemu(QemuExitCode::Success); // all tests passed!
 }
 
 #[test_case]
 fn trivial_assertion() {
-    serial_print!("trivial assertion... ");
-    assert_eq!(1, 0);
-    serial_println!("[ok]");
+    assert_eq!(1, 1);
 }
 
 
@@ -84,4 +82,20 @@ pub fn exit_qemu(exit_code: QemuExitCode) {
     }
 }
 
+// The `Testable` Trait
+trait Testable {
+    fn run(&self);
+}
 
+impl<T> Testable for T where
+    T: Fn(),
+{
+    fn run(&self) {
+        // Type name of a function is the name of the function
+        use core::any;
+        serial_print!("{} is running:\t", any::type_name::<T>());
+
+        self();
+        serial_println!("[ok]");
+    }
+}

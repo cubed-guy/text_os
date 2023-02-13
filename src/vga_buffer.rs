@@ -156,3 +156,31 @@ pub fn _print(args: fmt::Arguments) {
 	use core::fmt::Write;
 	WRITER.lock().write_fmt(args).unwrap();
 }
+
+
+#[test_case]  // test cases pass if there is no panic
+fn test_println_simple() {
+	println!("Hello, World!");
+}
+
+#[test_case]
+fn test_println_many() {
+	for i in 1..200 {
+		println!("REEEEEEEE {}", i);
+	}
+}
+
+#[test_case]
+fn test_println_output() {  // if the output shows up in the vga buffer
+	let s = "This should fit in one line";
+	println!("{}", s);
+	for (i, c) in s.chars().enumerate() {
+		let screen_char = WRITER  // global static buffer
+			.lock()
+			.buffer
+			// BUFFER_HEIGHT-1 is the last line. ln shifts it up one
+			.chars[BUFFER_HEIGHT - 2][i]
+			.read();
+		assert_eq!(char::from(screen_char.ascii_character), c);
+	}
+}
