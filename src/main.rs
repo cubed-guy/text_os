@@ -6,6 +6,7 @@
 #![reexport_test_harness_main = "test_main"]
 
 mod vga_buffer;
+mod serial;
 
 use core::panic::PanicInfo;
 
@@ -26,7 +27,7 @@ pub extern "C" fn _start() -> ! {  // '!' never returns
 // specified because no std
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
-    println!("{}", info);
+    serial_println!("{}", info);
 
     loop {}
 }
@@ -34,8 +35,8 @@ fn panic(info: &PanicInfo) -> ! {
 
 #[cfg(test)]
 fn test_runner(tests: &[&dyn Fn()]) {
-    if tests.len() != 1 { println!("Running {} tests!", tests.len()) }
-    else { println!("Running 1 test!") }
+    if tests.len() != 1 { serial_println!("Running {} tests!", tests.len()) }
+    else { serial_println!("Running 1 test!") }
 
     for test in tests {
         test();
@@ -45,9 +46,9 @@ fn test_runner(tests: &[&dyn Fn()]) {
 
 #[test_case]
 fn trivial_assertion() {
-    print!("trivial assertion... ");
-    assert_eq!(1, 1);
-    println!("[ok]");
+    serial_print!("trivial assertion... ");
+    assert_eq!(1, 0);
+    serial_println!("[ok]");
 }
 
 
