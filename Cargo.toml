@@ -18,5 +18,10 @@ features = ["spin_no_std"]
 
 [package.metadata.bootimage]
 # we specify the port number using "iobase" and the size of the port with "iosize"
-test-args = ["-device", "isa-debug-exit,iobase=0xf4,iosize=0x04", "-serial", "stdio"]
+test-args = [
+	"-device", "isa-debug-exit,iobase=0xf4,iosize=0x04",
+	"-serial", "stdio",
+	"-display", "none",
+]
 test-success-exit-code = 33
+test-timeout = 300  # default value (in seconds), configurable

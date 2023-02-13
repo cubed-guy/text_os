@@ -26,6 +26,18 @@ pub extern "C" fn _start() -> ! {  // '!' never returns
 
 // specified because no std
 #[panic_handler]
+#[cfg(test)]
+fn panic(info: &PanicInfo) -> ! {
+    serial_println!("[FAIL]");
+    serial_println!("Error: {}", info);
+    exit_qemu(QemuExitCode::Failed);
+
+    loop {}
+}
+
+// specified because no std
+#[panic_handler]
+#[cfg(not(test))]
 fn panic(info: &PanicInfo) -> ! {
     serial_println!("{}", info);
 
