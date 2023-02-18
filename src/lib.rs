@@ -18,9 +18,9 @@ impl<T> Testable for T where
 {
     fn run(&self) {
         use core::any;
-        serial_print!("Running test {}:", any::type_name::<T>());
+        serial_print!("Running test {}:\t", any::type_name::<T>());
         self();
-        serial_println!("[ok]");
+        serial_println!("\x1b[92m[ok]\x1b[0m");
     }
 }
 
@@ -34,8 +34,8 @@ pub fn test_runner(tests: &[&dyn Testable]) {
 }
 
 pub fn test_panic_handler(info: &PanicInfo) -> ! {
-    serial_println!("[FAIL]");
-    serial_println!("Erro: {}", info);
+    serial_println!("\x1b[91m[FAIL]");
+    serial_println!("Error:\x1b[0m {}", info);
     exit_qemu(QemuExitCode::Failed);
     loop {}
 }
