@@ -18,9 +18,16 @@ use core::panic::PanicInfo;
 pub extern "C" fn _start() -> ! {  // '!' never returns
     println!("Hello, {}", "World!");
 
+    text_os::init();  // calls all the init methods
+
+    // invoking an interrupt breakpoint exception explicitly
+    x86_64::instructions::interrupts::int3();  // Is this what an intrinsic is?
+
     #[cfg(test)]
     test_main();
 
+
+    println!("There was an exception maybe? But it didn't crash.");
     // panic!("Oh noes!");
     loop {}
 }

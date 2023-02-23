@@ -4,6 +4,7 @@
 
 #![cfg_attr(test, no_main)]
 #![feature(custom_test_frameworks)]
+#![feature(abi_x86_interrupt)]
 #![test_runner(crate::test_runner)]
 #![reexport_test_harness_main = "test_main"]
 
@@ -80,3 +81,13 @@ pub fn exit_qemu(exit_code: QemuExitCode) {
 
 pub mod serial;
 pub mod vga_buffer;
+
+
+// Exceptions and Interrupts
+
+pub mod interrupts;
+
+// idt and all other things will be initialised here.
+pub fn init() {
+    interrupts::init_idt();
+}
