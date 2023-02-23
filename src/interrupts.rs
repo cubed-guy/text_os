@@ -24,3 +24,8 @@ use crate::println;
 extern "x86-interrupt" fn breakpoint_handler(stack_frame: InterruptStackFrame) {
 	println!("WE JUSt HAD A BREAKPOINT EXCEPTION: {:#?}", stack_frame);
 }
+
+#[test_case]
+fn test_breakpoint_exception() {
+	x86_64::instructions::interrupts::int3();
+}
