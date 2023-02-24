@@ -20,8 +20,21 @@ pub extern "C" fn _start() -> ! {  // '!' never returns
 
     text_os::init();  // calls all the init methods
 
-    // invoking an interrupt breakpoint exception explicitly
-    x86_64::instructions::interrupts::int3();  // Is this what an intrinsic is?
+    // // invoking an interrupt breakpoint exception explicitly
+    // x86_64::instructions::interrupts::int3();  // Is this what an intrinsic is?
+
+    // causing a page fault when there is no page fault handler
+    unsafe {
+        *(0xdeadbeef as *mut u64) = 42;
+    }
+
+    // fn stack_overflow(n: i32) {
+    //     if n != 0 {
+    //         stack_overflow(n);
+    //     }
+    // }
+
+    // stack_overflow(1);
 
     #[cfg(test)]
     test_main();
@@ -36,7 +49,7 @@ pub extern "C" fn _start() -> ! {  // '!' never returns
 #[panic_handler]
 #[cfg(not(test))]
 fn panic(info: &PanicInfo) -> ! {
-    serial_println!("{}", info);
+    println!("{}", info);
 
     loop {}
 }
