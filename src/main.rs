@@ -24,17 +24,20 @@ pub extern "C" fn _start() -> ! {  // '!' never returns
     // x86_64::instructions::interrupts::int3();  // Is this what an intrinsic is?
 
     // causing a page fault when there is no page fault handler
-    unsafe {
-        *(0xdeadbeef as *mut u64) = 42;
-    }
-
-    // fn stack_overflow(n: i32) {
-    //     if n != 0 {
-    //         stack_overflow(n);
-    //     }
+    // unsafe {
+    //     *(0xdeadbeef as *mut u64) = 42;
     // }
 
-    // stack_overflow(1);
+    // causing a stack overflow, triple fault if no stack switching.
+    // There's no stack switching.
+    // We can switch stacks on interrupt using the interrupt stack table
+    fn stack_overflow(n: i32) {
+        if n != 0 {
+            stack_overflow(n);
+        }
+    }
+
+    stack_overflow(1);
 
     #[cfg(test)]
     test_main();

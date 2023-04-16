@@ -9,6 +9,7 @@ lazy_static! {
 			.set_handler_fn(breakpoint_handler);
 		idt.double_fault  // double fault entry in idt
 			.set_handler_fn(double_fault_handler);
+		// idt.double_fault.set_ist_index(DOUBLE_FAULT_IST_INDEX);
 
 		idt
 	};
