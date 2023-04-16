@@ -90,6 +90,7 @@ pub mod interrupts;
 
 // idt and all other things will be initialised here.
 pub fn init() {
+    gdt::init();
     interrupts::init_idt();
 }
 
