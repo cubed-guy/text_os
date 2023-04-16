@@ -27,17 +27,7 @@ pub extern "C" fn _start() -> ! {  // '!' never returns
     // unsafe {
     //     *(0xdeadbeef as *mut u64) = 42;
     // }
-
-    // causing a stack overflow, triple fault if no stack switching.
-    // There's no stack switching.
-    // We can switch stacks on interrupt using the interrupt stack table
-    fn stack_overflow(n: i32) {
-        if n != 0 {
-            stack_overflow(n);
-        }
-    }
-
-    stack_overflow(1);
+    // A stack overflow causes a triple fault if there's no stack switching.
 
     #[cfg(test)]
     test_main();
