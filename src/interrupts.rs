@@ -53,3 +53,20 @@ extern "x86-interrupt" fn double_fault_handler(
 	panic!("AAAAAAAAHHH!! DOUBLE FAULT!\n{:#?}", stack_frame);
 }
 
+
+
+// external interrupts
+
+use pic8259::ChainedPics;
+use spin;
+
+// we'll be remapping the interrupt numbers from the PIC
+// (PIC - programmable interrupt controller)
+
+pub const PIC_1_OFFSET: u8 = 32;
+pub const PIC_2_OFFSET: u8 = PIC_1_OFFSET + 8;
+
+pub static PICS: spin::Mutex<ChainedPics> =  // Mutex ie bottleneck lol
+	spin::Mutex::new(unsafe { ChainedPics::new(PIC_1_OFFSET, PIC_2_OFFSET) });  // 32+0 to 32+15  (32-47)
+
+
