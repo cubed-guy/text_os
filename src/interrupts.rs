@@ -19,6 +19,8 @@ lazy_static! {
 		// Hardware interrupt entries
 		idt[InterruptIndex::Timer.as_usize()]
 			.set_handler_fn(timer_interrupt_handler);
+		idt[InterruptIndex::Keyboard.as_usize()]
+			.set_handler_fn(keyboard_interrupt_handler);
 
 		idt
 	};
@@ -79,6 +81,7 @@ pub static PICS: spin::Mutex<ChainedPics> =  // Mutex ie bottleneck lol
 #[repr(u8)]
 pub enum InterruptIndex {
 	Timer = PIC_1_OFFSET,
+	Keyboard,
 }
 
 impl InterruptIndex {
@@ -100,6 +103,20 @@ extern "x86-interrupt" fn timer_interrupt_handler(
 	// Notify the PIC (not CPU) to end the interrupt and become available again
 	unsafe {
 		PICS.lock()
-			.notify_end_of_interrupt(InterruptIndex::Timer.as_u8())
+			.notify_end_of_interrupt(InterruptIndex::Timer.as_u8());
+	}
+}
+
+extern "x86-interrupt" fn keyboard_interrupt_handler(
+	_stack_frame: InterruptStackFrame,
+) {
+	use crate::print;
+	print!("k");
+
+	// Notify the PIC (not CPU) to end the interrupt and become available again
+	// ----***  Don't forget to use the correct interrupt index!  ***----
+	unsafe {
+		PICS.lock()
+			.notify_end_of_interrupt(InterruptIndex::Keyboard.as_u8());
 	}
 }
