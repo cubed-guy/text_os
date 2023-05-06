@@ -96,4 +96,10 @@ extern "x86-interrupt" fn timer_interrupt_handler(
 ) {
 	use crate::print;
 	print!(".");
+
+	// Notify the PIC (not CPU) to end the interrupt and become available again
+	unsafe {
+		PICS.lock()
+			.notify_end_of_interrupt(InterruptIndex::Timer.as_u8())
+	}
 }
