@@ -16,6 +16,10 @@ lazy_static! {
 				.set_stack_index(gdt::DOUBLE_FAULT_IST_INDEX);
 		}
 
+		// Hardware interrupt entries
+		idt[InterruptIndex::Timer.as_usize()]
+			.set_handler_fn(timer_interrupt_handler);
+
 		idt
 	};
 }
@@ -70,3 +74,26 @@ pub static PICS: spin::Mutex<ChainedPics> =  // Mutex ie bottleneck lol
 	spin::Mutex::new(unsafe { ChainedPics::new(PIC_1_OFFSET, PIC_2_OFFSET) });  // 32+0 to 32+15  (32-47)
 
 
+// We'll make an enum to name the interrupt indices
+#[derive(Debug, Copy, Clone)]
+#[repr(u8)]
+pub enum InterruptIndex {
+	Timer = PIC_1_OFFSET,
+}
+
+impl InterruptIndex {
+	fn as_u8(self) -> u8 {
+		self as u8
+	}
+
+	fn as_usize(self) -> usize {
+		usize::from(self.as_u8())
+	}
+}
+
+extern "x86-interrupt" fn timer_interrupt_handler(
+	_stack_frame: InterruptStackFrame,
+) {
+	use crate::print;
+	print!(".");
+}
