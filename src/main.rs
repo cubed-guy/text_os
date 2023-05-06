@@ -35,7 +35,15 @@ pub extern "C" fn _start() -> ! {  // '!' never returns
 
     println!("There was an exception maybe? But it didn't crash.");
     // panic!("Oh noes!");
-    loop {}
+    loop {
+        // when an interrupt occurs,
+        // the handler will wait for the writer to be unlocked.
+        // this thread waits for the interrupt to end.
+        // deadlock!
+        for _ in 1..1000_000 { }
+        print!("-");
+        // The SOLUTION? Prevent interrupts when the mutex is locked.
+    }
 }
 
 // specified because no std

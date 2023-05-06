@@ -154,7 +154,13 @@ macro_rules! print {
 #[doc(hidden)]
 pub fn _print(args: fmt::Arguments) {
 	use core::fmt::Write;
-	WRITER.lock().write_fmt(args).unwrap();
+	// if an interrupt occurs while the mutex is locked
+	// a deadlock occurs.
+	// Thus, we'll prevent the handling of interrupts while the mutex is locked.
+	use x86_64::instructions::interrupts;
+	interrupts::without_interrupts(|| {
+		WRITER.lock().write_fmt(args).unwrap();
+	});
 }
 
 
@@ -173,14 +179,19 @@ fn test_println_many() {
 #[test_case]
 fn test_println_output() {  // if the output shows up in the vga buffer
 	let s = "This should fit in one line";
-	println!("{}", s);
-	for (i, c) in s.chars().enumerate() {
-		let screen_char = WRITER  // global static buffer
-			.lock()
-			.buffer
-			// BUFFER_HEIGHT-1 is the last line. ln shifts it up one
-			.chars[BUFFER_HEIGHT - 2][i]
-			.read();
-		assert_eq!(char::from(screen_char.ascii_character), c);
-	}
+
+	use core::fmt::Write;
+	use x86_64::instructions::interrupts;
+	interrupts::without_interrupts ( || {
+		let mut writer = WRITER.lock();  // global static buffer
+		writeln!(writer, "\n{}", s).expect("could not write to vga buffer");
+		for (i, c) in s.chars().enumerate() {
+			let screen_char = writer
+				.buffer
+				// BUFFER_HEIGHT-1 is the last line. ln shifts it up one
+				.chars[BUFFER_HEIGHT - 2][i]
+				.read();
+			assert_eq!(char::from(screen_char.ascii_character), c);
+		}
+	});
 }

@@ -17,10 +17,16 @@ lazy_static!{
 #[doc(hidden)]
 pub fn _print(args: ::core::fmt::Arguments) {
 	use core::fmt::Write;
-	SERIAL1
-		.lock()  // to be able to use the mutex wrapped object
-		.write_fmt(args)  // SerialPort provides self.write_fmt(args) ie implements fmt::Write
-		.expect("Serial Printing Failed");  // on error
+	// if an interrupt occurs while the mutex is locked
+	// a deadlock occurs.
+	// Thus, we'll prevent the handling of interrupts while the mutex is locked.
+	use x86_64::instructions::interrupts;
+	interrupts::without_interrupts( || {
+		SERIAL1
+			.lock()  // to be able to use the mutex wrapped object
+			.write_fmt(args)  // SerialPort provides self.write_fmt(args) ie implements fmt::Write
+			.expect("Serial Printing Failed");  // on error
+	});
 }
 
 #[macro_export]
