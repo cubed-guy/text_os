@@ -38,7 +38,7 @@ pub fn test_panic_handler(info: &PanicInfo) -> ! {
     serial_println!("\x1b[91m[FAIL]");
     serial_println!("Error:\x1b[0m {}", info);
     exit_qemu(QemuExitCode::Failed);
-    loop {}
+    hlt_loop();
 }
 
 // Entry point
@@ -47,7 +47,7 @@ pub fn test_panic_handler(info: &PanicInfo) -> ! {
 pub extern "C" fn _start() -> ! {
     init();
     test_main();
-    loop {}
+    hlt_loop();
 }
 
 #[cfg(test)]
@@ -101,3 +101,11 @@ pub fn init() {
 // Stack switching
 
 pub mod gdt;
+
+
+// a better way to loop endlessly
+pub fn hlt_loop() -> ! {
+    loop {
+        x86_64::instructions::hlt();  // thread sleeps until interrupt occurs
+    }
+}
