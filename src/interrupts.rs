@@ -153,7 +153,8 @@ extern "x86-interrupt" fn page_fault_handler(
 	stack_frame: InterruptStackFrame,
 	error_code: PageFaultErrorCode,
 ) {
-	use x86_64::registers::control::Cr2;  // points to current page table
+	// use x86_64::registers::control::Cr3;  // points to current page table
+	use x86_64::registers::control::Cr2;  // points to the bad address
 	use crate::hlt_loop;
 
 	println!("AAAAAAAAHHH! PAGE FAULT!");

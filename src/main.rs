@@ -27,11 +27,27 @@ pub extern "C" fn _start() -> ! {  // '!' never returns
     // but now we do have a handler
     // unsafe {
     //     println!("Making an unsafe dereference");
-    //     *(0xdeadbeaf as *mut u32) = 42;
+    //     *(0xdeadbeef as *mut u32) = 42;
     // }
-    let ptr = 0xdeadbeaf as *mut u32;
-    unsafe { core::ptr::write_unaligned(ptr, 42); }
+    // let ptr = 0xdeadbeef as *mut u32;
+    // unsafe { core::ptr::write_unaligned(ptr, 42); }
+    // // unsafe { *ptr = 42; }  // works in release build
     // A stack overflow causes a triple fault if there's no stack switching.
+
+    let ptr = 0x22259b as *mut u32;
+    unsafe { let _x = core::ptr::read_unaligned(ptr); }
+    println!("Read from the instruction pointer worked!");
+
+    // unsafe { core::ptr::write_unaligned(ptr, 42); }
+    // println!("Write to the instruction pointer worked!");
+
+    use x86_64::registers::control::Cr3;  // points to the current page table
+
+    // (physical frame, flags)
+    let (level_4_page_table, _) = Cr3::read();
+    println!("Physical Address of the current page table: {:?}",
+        level_4_page_table.start_address());
+
 
     #[cfg(test)]
     test_main();
