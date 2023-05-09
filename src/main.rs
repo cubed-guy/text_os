@@ -30,7 +30,7 @@ pub extern "C" fn _start() -> ! {  // '!' never returns
     //     *(0xdeadbeaf as *mut u32) = 42;
     // }
     let ptr = 0xdeadbeaf as *mut u32;
-    unsafe { *ptr = 42; }
+    unsafe { core::ptr::write_unaligned(ptr, 42); }
     // A stack overflow causes a triple fault if there's no stack switching.
 
     #[cfg(test)]
