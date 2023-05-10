@@ -13,9 +13,14 @@ use core::panic::PanicInfo;
 
 // static HELLO: &[u8] = b"Hello,_World!";  // this is where our string lives
 
+use bootloader::{BootInfo, entry_point};
+
+// creates a declaration for an entry point function.
+// defines _start here itself
+entry_point!(kernel_main);
+
 // entry point before init of runtime
-#[no_mangle]
-pub extern "C" fn _start() -> ! {  // '!' never returns
+fn kernel_main(_boot_info: &'static BootInfo) -> ! {  // '!' never returns
     println!("Hello, {}", "World!");
 
     text_os::init();  // calls all the init methods
