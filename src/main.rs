@@ -20,7 +20,7 @@ use bootloader::{BootInfo, entry_point};
 entry_point!(kernel_main);
 
 // entry point before init of runtime
-fn kernel_main(_boot_info: &'static BootInfo) -> ! {  // '!' never returns
+fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
     println!("Hello, {}", "World!");
 
     text_os::init();  // calls all the init methods
@@ -43,8 +43,37 @@ fn kernel_main(_boot_info: &'static BootInfo) -> ! {  // '!' never returns
     unsafe { let _x = core::ptr::read_unaligned(ptr); }
     println!("Read from the instruction pointer worked!");
 
+    println!(
+        "We're mapping physical memory to virtual memory using this offset: {:x}",
+        boot_info.physical_memory_offset
+    );
     // unsafe { core::ptr::write_unaligned(ptr, 42); }
     // println!("Write to the instruction pointer worked!");
+
+    use text_os::memory::curr_l4_table;
+    use x86_64::VirtAddr;
+
+    let physical_memory_offset =
+        VirtAddr::new(boot_info.physical_memory_offset);
+    let l4_table = unsafe { curr_l4_table(physical_memory_offset) };
+
+    for (i, entry) in l4_table.iter().enumerate() {
+        if !entry.is_unused() {
+            println!("L4 [{:2}] {:?}", i, entry);
+
+            use x86_64::structures::paging::PageTable;
+            let phys = entry.frame().unwrap().start_address();
+            let virt = phys.as_u64() + boot_info.physical_memory_offset;
+            let ptr: *mut PageTable = VirtAddr::new(virt).as_mut_ptr();
+            let l3_table = unsafe { &*ptr };
+
+            for (i, entry) in l3_table.iter().enumerate() {
+                if !entry.is_unused() {
+                    println!("  L3 [{:2}] {:?}", i, entry);
+                }
+            }
+        }
+    }
 
     use x86_64::registers::control::Cr3;  // points to the current page table
 
@@ -52,6 +81,29 @@ fn kernel_main(_boot_info: &'static BootInfo) -> ! {  // '!' never returns
     let (level_4_page_table, _) = Cr3::read();
     println!("Physical Address of the current page table: {:?}",
         level_4_page_table.start_address());
+
+    use text_os::memory::translate_address;
+
+    let addresses = [
+        // vga buffer
+        0xb8000,
+
+        // code page... how do we know this?
+        0x201008,
+
+        // stack page... again, how do we know this?
+        0x0100_0020_1a10,
+
+        // physical address 0
+        boot_info.physical_memory_offset,
+
+    ];
+
+    for &address in &addresses {  // also what's this for loop syntax
+        let virt = VirtAddr::new(address);
+        let phys = unsafe { translate_address(virt, physical_memory_offset) };
+        println!("{:?} -> {:?}", virt, phys);
+    }
 
 
     #[cfg(test)]

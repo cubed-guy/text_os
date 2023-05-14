@@ -116,3 +116,7 @@ pub fn hlt_loop() -> ! {
         x86_64::instructions::hlt();  // thread sleeps until interrupt occurs
     }
 }
+
+
+// Paging!
+pub mod memory;
