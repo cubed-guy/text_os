@@ -6,7 +6,7 @@ use x86_64::{
 
 /// offset must be valid
 /// if called twice or more, will violate single mut ref
-pub unsafe fn curr_l4_table(offset: VirtAddr)
+unsafe fn curr_l4_table(offset: VirtAddr)
 	-> &'static mut PageTable
 {
 	use x86_64::registers::control::Cr3;
@@ -19,7 +19,8 @@ pub unsafe fn curr_l4_table(offset: VirtAddr)
 	&mut *page_table_ptr  // unsafe because we assume this is static
 }
 
-pub unsafe fn translate_address(address: VirtAddr, offset: VirtAddr)
+#[allow(dead_code)]
+unsafe fn translate_address(address: VirtAddr, offset: VirtAddr)
 	-> Option<PhysAddr>
 {
 	translate_address_inner(address, offset)
@@ -57,4 +58,13 @@ fn translate_address_inner(address: VirtAddr, offset: VirtAddr)
 
 	Some(frame.start_address() + u64::from(address.page_offset()))
 
+}
+
+
+// Using an existing implementation
+use x86_64::structures::paging::OffsetPageTable;
+
+pub unsafe fn init(physical_memory_offset: VirtAddr) -> OffsetPageTable<'static> {
+	let l4_table = curr_l4_table(physical_memory_offset);
+	OffsetPageTable::new(l4_table, physical_memory_offset)
 }

@@ -50,30 +50,30 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
     // unsafe { core::ptr::write_unaligned(ptr, 42); }
     // println!("Write to the instruction pointer worked!");
 
-    use text_os::memory::curr_l4_table;
+    use text_os::memory::init;
     use x86_64::VirtAddr;
 
     let physical_memory_offset =
         VirtAddr::new(boot_info.physical_memory_offset);
-    let l4_table = unsafe { curr_l4_table(physical_memory_offset) };
+    let mapper = unsafe { init(physical_memory_offset) };
 
-    for (i, entry) in l4_table.iter().enumerate() {
-        if !entry.is_unused() {
-            println!("L4 [{:2}] {:?}", i, entry);
+    // for (i, entry) in mapper.iter().enumerate() {
+    //     if !entry.is_unused() {
+    //         println!("L4 [{:2}] {:?}", i, entry);
 
-            use x86_64::structures::paging::PageTable;
-            let phys = entry.frame().unwrap().start_address();
-            let virt = phys.as_u64() + boot_info.physical_memory_offset;
-            let ptr: *mut PageTable = VirtAddr::new(virt).as_mut_ptr();
-            let l3_table = unsafe { &*ptr };
+    //         use x86_64::structures::paging::PageTable;
+    //         let phys = entry.frame().unwrap().start_address();
+    //         let virt = phys.as_u64() + boot_info.physical_memory_offset;
+    //         let ptr: *mut PageTable = VirtAddr::new(virt).as_mut_ptr();
+    //         let l3_table = unsafe { &*ptr };
 
-            for (i, entry) in l3_table.iter().enumerate() {
-                if !entry.is_unused() {
-                    println!("  L3 [{:2}] {:?}", i, entry);
-                }
-            }
-        }
-    }
+    //         for (i, entry) in l3_table.iter().enumerate() {
+    //             if !entry.is_unused() {
+    //                 println!("  L3 [{:2}] {:?}", i, entry);
+    //             }
+    //         }
+    //     }
+    // }
 
     use x86_64::registers::control::Cr3;  // points to the current page table
 
@@ -82,7 +82,7 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
     println!("Physical Address of the current page table: {:?}",
         level_4_page_table.start_address());
 
-    use text_os::memory::translate_address;
+    use x86_64::structures::paging::Translate;
 
     let addresses = [
         // vga buffer
@@ -101,7 +101,7 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
 
     for &address in &addresses {  // also what's this for loop syntax
         let virt = VirtAddr::new(address);
-        let phys = unsafe { translate_address(virt, physical_memory_offset) };
+        let phys = mapper.translate_addr(virt);
         println!("{:?} -> {:?}", virt, phys);
     }
 
