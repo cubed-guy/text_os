@@ -50,12 +50,12 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
     // unsafe { core::ptr::write_unaligned(ptr, 42); }
     // println!("Write to the instruction pointer worked!");
 
-    use text_os::memory::init;
+    use text_os::memory;
     use x86_64::VirtAddr;
 
     let physical_memory_offset =
         VirtAddr::new(boot_info.physical_memory_offset);
-    let mapper = unsafe { init(physical_memory_offset) };
+    let mapper = unsafe { memory::init(physical_memory_offset) };
 
     // for (i, entry) in mapper.iter().enumerate() {
     //     if !entry.is_unused() {
@@ -82,8 +82,6 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
     println!("Physical Address of the current page table: {:?}",
         level_4_page_table.start_address());
 
-    use x86_64::structures::paging::Translate;
-
     let addresses = [
         // vga buffer
         0xb8000,
@@ -99,6 +97,7 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
 
     ];
 
+    use x86_64::structures::paging::Translate;
     for &address in &addresses {  // also what's this for loop syntax
         let virt = VirtAddr::new(address);
         let phys = mapper.translate_addr(virt);
