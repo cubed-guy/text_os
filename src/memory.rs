@@ -118,3 +118,45 @@ unsafe impl FrameAllocator<Size4KiB> for EmptyFrameAllocator {
 // We know that the bootloader creates page tables for the first megabyte of addresses.
 
 
+// We'll create a proper allocator now
+
+use bootloader::bootinfo::MemoryMap;
+pub struct BootInfoFrameAllocator {
+	memory_map: &'static MemoryMap,
+	next: usize,
+}
+
+impl BootInfoFrameAllocator {
+	pub unsafe fn init(memory_map: &'static MemoryMap) -> Self {
+		BootInfoFrameAllocator {
+			memory_map,
+			next: 0,
+		}
+	}
+
+	fn usable_frames(&self) -> impl Iterator<Item = PhysFrame> {
+		use bootloader::bootinfo::MemoryRegionType;
+
+		let regions = self.memory_map.iter();
+
+		let usable_regions = regions
+			.filter(|r| r.region_type == MemoryRegionType::Usable);
+
+		let addr_regions = usable_regions
+			.map(|r| r.range.start_addr()..r.range.end_addr());
+
+		let frame_addresses = addr_regions.flat_map(|r| r.step_by(4096));
+
+		frame_addresses.map(|addr| PhysFrame::containing_address(PhysAddr::new(addr)))
+
+	}
+
+}
+
+unsafe impl FrameAllocator<Size4KiB> for BootInfoFrameAllocator {
+	fn allocate_frame(&mut self) -> Option<PhysFrame<Size4KiB>> {
+		let frame = self.usable_frames().nth(self.next);
+		self.next += 1;
+		frame
+	}
+}

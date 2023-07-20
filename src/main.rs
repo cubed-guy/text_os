@@ -56,10 +56,13 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
     let physical_memory_offset =
         VirtAddr::new(boot_info.physical_memory_offset);
     let mut mapper = unsafe { memory::init(physical_memory_offset) };
-    let mut frame_allocator = memory::EmptyFrameAllocator;
+    // let mut frame_allocator = memory::EmptyFrameAllocator;
+    let mut frame_allocator = unsafe {
+        memory::BootInfoFrameAllocator::init(&boot_info.memory_map)
+    };
 
     use x86_64::structures::paging::Page;
-    let page = Page::containing_address(VirtAddr::new(0));
+    let page = Page::containing_address(VirtAddr::new(0xdead_beef));
     memory::create_example_mapping(
         page, &mut mapper, &mut frame_allocator
     );
