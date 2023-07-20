@@ -64,7 +64,40 @@ fn translate_address_inner(address: VirtAddr, offset: VirtAddr)
 // Using an existing implementation
 use x86_64::structures::paging::OffsetPageTable;
 
+/// Returns a struct representing a page table
 pub unsafe fn init(physical_memory_offset: VirtAddr) -> OffsetPageTable<'static> {
 	let l4_table = curr_l4_table(physical_memory_offset);
 	OffsetPageTable::new(l4_table, physical_memory_offset)
+}
+
+
+// Adding mappings to our page table
+
+use x86_64::structures::paging::{
+	Page, PhysFrame, Mapper, Size4KiB, FrameAllocator
+};
+
+// this maps 0xb8000 to a given VirtAddr
+// this way we can see the effects of writes directly on the screen
+pub fn create_example_mapping(
+	page: Page,
+	mapper: &mut OffsetPageTable,
+
+	// FrameAllocator works even for huge pages
+	frame_allocator: &mut impl FrameAllocator<Size4KiB>,
+) {
+	use x86_64::structures::paging::PageTableFlags as Flags;
+
+	// we'll be mapping the page address to the frame
+	let frame = PhysFrame::containing_address(PhysAddr::new(0xb8000));
+	let flags = Flags::PRESENT | Flags::WRITABLE;
+
+	// now we'll allocate page tables if necessary and make the mapping
+	let map_to_result = unsafe {  // actually unsafe. Tutorial author says FIXME.
+		// can cause two mut references to the same physical mem
+		mapper.map_to(page, frame, flags, frame_allocator)
+	};
+
+	// flush the TLB because it's outdated now
+	map_to_result.expect("Mapper::map_to() failed").flush();
 }
