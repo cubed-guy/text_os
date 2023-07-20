@@ -55,7 +55,21 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
 
     let physical_memory_offset =
         VirtAddr::new(boot_info.physical_memory_offset);
-    let mapper = unsafe { memory::init(physical_memory_offset) };
+    let mut mapper = unsafe { memory::init(physical_memory_offset) };
+    let mut frame_allocator = memory::EmptyFrameAllocator;
+
+    use x86_64::structures::paging::Page;
+    let page = Page::containing_address(VirtAddr::new(0));
+    memory::create_example_mapping(
+        page, &mut mapper, &mut frame_allocator
+    );
+
+    // Writing to the page table
+    let page_ptr: *mut u64 = page.start_address().as_mut_ptr();
+    // The hex num represents a white "New!"
+    unsafe { page_ptr.offset(266).write_volatile(0x_f021_f077_f065_f04e) };
+    unsafe { page_ptr.offset(248).write_volatile(0x_f021_f077_f065_f04e) };
+
 
     // for (i, entry) in mapper.iter().enumerate() {
     //     if !entry.is_unused() {

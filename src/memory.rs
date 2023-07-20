@@ -101,3 +101,20 @@ pub fn create_example_mapping(
 	// flush the TLB because it's outdated now
 	map_to_result.expect("Mapper::map_to() failed").flush();
 }
+
+
+pub struct EmptyFrameAllocator;
+
+
+// unsafe because we might not be able to provide an unused frame
+unsafe impl FrameAllocator<Size4KiB> for EmptyFrameAllocator {
+	// contract has been satisfied because we return only None
+	fn allocate_frame(&mut self) -> Option<PhysFrame<Size4KiB>> {
+		None
+	}
+}
+
+// EmptyFrameAllocator can allocate a new page if no new page tables need to be created.
+// We know that the bootloader creates page tables for the first megabyte of addresses.
+
+
