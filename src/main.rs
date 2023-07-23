@@ -14,6 +14,7 @@ use core::panic::PanicInfo;
 // static HELLO: &[u8] = b"Hello,_World!";  // this is where our string lives
 
 use bootloader::{BootInfo, entry_point};
+use text_os::allocator;
 
 // creates a declaration for an entry point function.
 // defines _start here itself
@@ -122,9 +123,17 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
     }
 
 
+    // Heap stuff
+    allocator::init_heap(&mut mapper, &mut frame_allocator)
+        .expect("Heap initialisation failed.");
+
+    extern crate alloc;
+    use alloc::boxed::Box;
+    let x = Box::new(42);
+
+
     #[cfg(test)]
     test_main();
-
 
     println!("There was an exception maybe? But it didn't crash.");
     // panic!("Oh noes!");
