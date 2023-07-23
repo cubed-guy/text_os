@@ -17,11 +17,11 @@ unsafe impl GlobalAlloc for Dummy {
 }
 
 
-// and here we tell Rust to use this as the allocator
-#[global_allocator]
-static ALLOCATOR: Dummy = Dummy();
+// // and here we tell Rust to use this as the allocator
+// #[global_allocator]
+// static ALLOCATOR: Dummy = Dummy();
 
-pub const HEAP_START: usize = 0x4eab_a2ea_0000;
+pub const HEAP_START: *mut u8 = 0x4eab_a2ea_0000 as *mut u8;
 pub const HEAP_SIZE:  usize = 0x2_0000;
 
 use x86_64::structures::paging::PageTableFlags;
@@ -49,5 +49,14 @@ pub fn init_heap(
 		};
 	}
 
+	unsafe {
+		ALLOCATOR.lock().init(HEAP_START, HEAP_SIZE);
+	}
+
 	Ok(())  // source.rust meta.function.rust meta.block.rust support.type.rust
 }
+
+use linked_list_allocator::LockedHeap;
+
+#[global_allocator]
+static ALLOCATOR: LockedHeap = LockedHeap::empty();
