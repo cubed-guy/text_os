@@ -120,3 +120,5 @@ pub fn hlt_loop() -> ! {
 
 // Paging!
 pub mod memory;
+
+extern crate alloc;
