@@ -124,13 +124,31 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
 
 
     // Heap stuff
+    
     allocator::init_heap(&mut mapper, &mut frame_allocator)
         .expect("Heap initialisation failed.");
-
     extern crate alloc;
-    use alloc::boxed::Box;
-    let x = Box::new(42);
+    use alloc::{boxed::Box, vec::Vec, rc::Rc};
+    use alloc::vec;
 
+    // Box
+    let heap_value = Box::new(42);
+    println!("Value at the heap: {:p}.", heap_value);
+
+    // Vec
+    let mut vec = Vec::new();
+    for i in 0..500 {
+        vec.push(i);
+    }
+    println!("vec is at {:p}", vec.as_slice());
+
+    // Rc
+    let ref_counted = Rc::new(vec![1, 2, 3]);
+    let cloned_ref  = ref_counted.clone();
+    println!("Before dropping, reference count = {}", Rc::strong_count(&cloned_ref));
+    core::mem::drop(ref_counted);
+    println!("After dropping,  reference count = {}", Rc::strong_count(&cloned_ref));
+    println!("rc is at {:p}", cloned_ref);
 
     #[cfg(test)]
     test_main();
