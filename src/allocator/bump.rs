@@ -29,26 +29,30 @@ impl BumpAllocator {
 }
 
 use alloc::alloc::{GlobalAlloc, Layout};
+use super::Locked;
+use core::ptr;
 
-unsafe impl GlobalAlloc for BumpAllocator {
+unsafe impl GlobalAlloc for Locked<BumpAllocator> {
 	unsafe fn alloc(&self, layout: Layout) -> *mut u8 {
-		let alloc_start = self.next;
-		self.alloc_count += 1;
-		self.next = alloc_start + layout.size();
-		if self.next > self.heap_end {
-			panic!("Out of memory")
+		let mut locked_self = self.inner.lock();
+
+		// TODO: alignment
+		let alloc_start = locked_self.next;
+		locked_self.alloc_count += 1;
+		if locked_self.next + layout.size() > locked_self.heap_end {
+			ptr::null_mut()
+		} else {
+			locked_self.next = alloc_start + layout.size();
+			alloc_start as *mut u8
 		}
-		alloc_start as *mut u8
 	}
 
 	unsafe fn dealloc(&self, _ptr: *mut u8, _layout: Layout) {
-		if self.alloc_count < 0 {
-			return
-		}
+		let mut locked_self = self.lock();
 
-		self.alloc_count -= 1;
-		if self.alloc_count == 0 {
-			self.next = self.heap_start;
+		locked_self.alloc_count -= 1;
+		if locked_self.alloc_count == 0 {
+			locked_self.next = locked_self.heap_start;
 		}
 	}
 }

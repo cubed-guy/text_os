@@ -65,3 +65,21 @@ static ALLOCATOR: LockedHeap = LockedHeap::empty();
 // Allocator designs
 
 pub mod bump;
+
+/// A wrapper around Mutex to be able implement traits for it.
+/// Remember, its traits can be implemented anywhere in the same _crate_.
+pub struct Locked<A> {
+	pub inner: spin::Mutex<A>,
+}
+
+impl<A> Locked<A> {
+	pub const fn new(inner: A) -> Locked<A> {
+		Locked {
+			inner: spin::Mutex::new(inner),
+		}
+	}
+
+	pub fn lock(&self) -> spin::MutexGuard<A> {
+		self.inner.lock()
+	}
+}
