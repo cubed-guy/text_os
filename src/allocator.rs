@@ -56,10 +56,10 @@ pub fn init_heap(
 	Ok(())  // source.rust meta.function.rust meta.block.rust support.type.rust
 }
 
-use linked_list_allocator::LockedHeap;
+// use linked_list_allocator::LockedHeap;
 
-#[global_allocator]
-static ALLOCATOR: LockedHeap = LockedHeap::empty();
+// #[global_allocator]
+// static ALLOCATOR: LockedHeap = LockedHeap::empty();
 
 
 // Allocator designs
@@ -95,3 +95,8 @@ fn align_up(n: usize, alignment: usize) -> usize {
 	// n == am + k => (am+k+a-1) & !(a-1) = (am+a + k-1) & !(a-1) = am+a
 	// (n+a-1) & !(a-1)
 }
+
+use bump::BumpAllocator;
+
+#[global_allocator]
+static ALLOCATOR: Locked<BumpAllocator> = Locked::new(BumpAllocator::new());

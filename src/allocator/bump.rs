@@ -21,10 +21,10 @@ impl BumpAllocator {
 	///
 	/// It's unsafe because it assumes the region to be unused.
 	/// Also, this method must be called only once for each instance.
-	pub unsafe fn init(&mut self, heap_start: usize, heap_end: usize) {
-		self.heap_start = heap_start;
-		self.heap_end = heap_end;
-		self.next = heap_start;
+	pub unsafe fn init(&mut self, heap_start: *mut u8, heap_size: usize) {
+		self.heap_start = heap_start as usize;
+		self.heap_end = self.heap_start + heap_size;
+		self.next = heap_start as usize;
 	}
 }
 
