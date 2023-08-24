@@ -83,3 +83,15 @@ impl<A> Locked<A> {
 		self.inner.lock()
 	}
 }
+
+/// we assume alignment is a power of two.
+/// Maybe we should enforce it using the type system?
+fn align_up(n: usize, alignment: usize) -> usize {
+	// n == am => (am-1)|(a-1) + 1 = (am-1) + 1 = am
+	// n == am + k => (am+k-1)|(a-1) + 1 = (am+a-1) + 1 = am+a
+	((n - 1) | (alignment - 1)) + 1
+
+	// n == am => (am+a-1) & !(a-1) = am
+	// n == am + k => (am+k+a-1) & !(a-1) = (am+a + k-1) & !(a-1) = am+a
+	// (n+a-1) & !(a-1)
+}
