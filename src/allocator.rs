@@ -100,3 +100,5 @@ use bump::BumpAllocator;
 
 #[global_allocator]
 static ALLOCATOR: Locked<BumpAllocator> = Locked::new(BumpAllocator::new());
+
+pub mod linked_list;
