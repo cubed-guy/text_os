@@ -25,6 +25,9 @@ struct LinkedListAllocator {
 	head: ListNode,
 }
 
+use core::mem;
+use super::align_up;
+
 impl LinkedListAllocator {
 	pub const fn new() -> Self {
 		Self {
@@ -40,8 +43,6 @@ impl LinkedListAllocator {
 	}
 
 	unsafe fn add_free_region(&mut self, addr: usize, size: usize) {
-		use super::align_up;
-		use core::mem;
 
 		// make sure the input is aligned
 		assert_eq!(align_up(addr, mem::align_of::<ListNode>()), addr);
@@ -59,4 +60,42 @@ impl LinkedListAllocator {
 		self.head.next = Some(&mut *node_ptr);
 	}
 
+	fn find_region(&mut self, size: usize, align: usize)
+		-> Option<(&'static mut ListNode, usize)>  // node and the address
+	{
+		let mut current = &mut self.head;  // dummy
+
+		while let Some(ref mut region) = current.next {
+			if let Ok(alloc_start) = Self::alloc_from_region(&region, size, align) {
+				let new_next = region.next.take();
+				let ret = Some((current.next.take().unwrap(), alloc_start));
+				current.next = new_next;  // retopologise the list
+				return ret;
+			} else {
+				// we are in a good state
+				// now I want to set current to the next pointer
+				current = current.next.as_mut().unwrap();
+			}
+		}
+
+		None
+	}
+
+	fn alloc_from_region(region: &ListNode, size: usize, align: usize)
+		-> Result<usize, ()>
+	{
+		let alloc_start = align_up(region.start_addr(), align);
+		let alloc_end = alloc_start.checked_add(size).ok_or(())?;
+
+		if alloc_end > region.end_addr() {
+			return Err(());
+		}
+
+		let remaining_size = region.end_addr() - alloc_end;
+		if 0 < remaining_size && remaining_size < mem::size_of::<ListNode>() {
+			return Err(());
+		}
+
+		Ok(alloc_start)
+	}
 }
