@@ -21,7 +21,7 @@ impl ListNode {
 	}
 }
 
-struct LinkedListAllocator {
+pub struct LinkedListAllocator {
 	head: ListNode,
 }
 
@@ -38,8 +38,8 @@ impl LinkedListAllocator {
 	/// Initialising allocators is always unsafe.
 	/// The caller must guarantee that the heap bounds are valid and unused.
 	/// Must only be called once.
-	pub unsafe fn init(&mut self, heap_start: usize, heap_size: usize) {
-		self.add_free_region(heap_start, heap_size);
+	pub unsafe fn init(&mut self, heap_start: *mut u8, heap_size: usize) {
+		self.add_free_region(heap_start as usize, heap_size);
 	}
 
 	unsafe fn add_free_region(&mut self, addr: usize, size: usize) {

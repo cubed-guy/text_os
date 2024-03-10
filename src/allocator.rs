@@ -96,9 +96,11 @@ fn align_up(n: usize, alignment: usize) -> usize {
 	// (n+a-1) & !(a-1)
 }
 
-use bump::BumpAllocator;
+// use bump::BumpAllocator;
+use linked_list::LinkedListAllocator;
 
 #[global_allocator]
-static ALLOCATOR: Locked<BumpAllocator> = Locked::new(BumpAllocator::new());
+// static ALLOCATOR: Locked<BumpAllocator> = Locked::new(BumpAllocator::new());
+static ALLOCATOR: Locked<LinkedListAllocator> = Locked::new(LinkedListAllocator::new());
 
 pub mod linked_list;
