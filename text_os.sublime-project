@@ -34,8 +34,8 @@
 		{
 			"rust-analyzer":
 			{
-				"enabled": false
-			}
-		}
+				"enabled": true,
+			},
+		},
 	},
 }
