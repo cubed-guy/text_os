@@ -104,3 +104,4 @@ use linked_list::LinkedListAllocator;
 static ALLOCATOR: Locked<LinkedListAllocator> = Locked::new(LinkedListAllocator::new());
 
 pub mod linked_list;
+pub mod fixed_size_block;
