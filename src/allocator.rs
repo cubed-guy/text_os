@@ -53,7 +53,7 @@ pub fn init_heap(
 		ALLOCATOR.lock().init(HEAP_START, HEAP_SIZE);
 	}
 
-	Ok(())  // source.rust meta.function.rust meta.block.rust support.type.rust
+	Ok(())
 }
 
 // use linked_list_allocator::LockedHeap;
@@ -97,11 +97,13 @@ fn align_up(n: usize, alignment: usize) -> usize {
 }
 
 // use bump::BumpAllocator;
-use linked_list::LinkedListAllocator;
+// use linked_list::LinkedListAllocator;
+use fixed_size_block::FixedSizeAllocator;
 
 #[global_allocator]
 // static ALLOCATOR: Locked<BumpAllocator> = Locked::new(BumpAllocator::new());
-static ALLOCATOR: Locked<LinkedListAllocator> = Locked::new(LinkedListAllocator::new());
+// static ALLOCATOR: Locked<LinkedListAllocator> = Locked::new(LinkedListAllocator::new());
+static ALLOCATOR: Locked<FixedSizeAllocator> = Locked::new(FixedSizeAllocator::new());
 
 pub mod linked_list;
 pub mod fixed_size_block;
