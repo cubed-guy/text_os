@@ -34,8 +34,71 @@ impl FixedSizeAllocator {
 		}
 	}
 
-	fn list_index(&self, layout: Layout) -> Option<usize> {
+	fn list_index(&self, layout: &Layout) -> Option<usize> {
 		let required_size = layout.size().max(layout.align());
 		BLOCK_SIZES.iter().position(|&s| s >= required_size)
+	}
+}
+
+use super::Locked;
+use alloc::alloc::GlobalAlloc;
+
+unsafe impl GlobalAlloc for Locked<FixedSizeAllocator> {
+	unsafe fn alloc(&self, layout: Layout) -> *mut u8 {
+		let mut allocator = self.lock();
+		match allocator.list_index(&layout) {
+			None => allocator.fallback_alloc(layout),
+			Some(index) => {
+				match allocator.list_heads[index].take() {
+					Some(node) => {
+						// pop the list stack
+						allocator.list_heads[index] = node.next.take();
+						node as *mut ListNode as *mut u8
+					}
+					None => {
+						let block_size = BLOCK_SIZES[index];
+						let block_align = block_size;
+						let layout =
+							Layout::from_size_align(block_size, block_align)
+							.unwrap();
+						allocator.fallback_alloc(layout)
+					}
+				}
+			}
+		}
+	}
+
+	unsafe fn dealloc(&self, ptr: *mut u8, layout: Layout) {
+		let mut allocator = self.lock();
+
+		match allocator.list_index(&layout) {
+			// size not in default blocks, dealloc using fallback
+			None => {
+				use core::ptr::NonNull;
+				let ptr = NonNull::new(ptr).unwrap();
+
+				allocator.fallback_allocator.deallocate(ptr, layout);
+			}
+
+			// dealloc from blocks, add to list
+			Some(index) => {
+				// this is what we want to put in the block
+				let list_node = ListNode{
+					// it's a <&'static mut ListNode>
+					next: allocator.list_heads[index].take()
+				};
+
+				assert!(layout.size() <= BLOCK_SIZES[index]);  // size check
+				assert!(layout.align() <= BLOCK_SIZES[index]);  // align check
+
+				// list_node is on the heap
+				// we need to copy it onto the heap block
+				let ptr = ptr as *mut ListNode;  // cast from *mut u8
+				ptr.write_volatile(list_node);   // point block to old head
+
+				// set new head
+				allocator.list_heads[index] = Some(&mut *ptr);  // unsafe deref
+			}
+		}
 	}
 }
