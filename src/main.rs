@@ -124,7 +124,7 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
 
 
     // Heap stuff
-    
+
     allocator::init_heap(&mut mapper, &mut frame_allocator)
         .expect("Heap initialisation failed.");
     extern crate alloc;
@@ -149,6 +149,13 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
     core::mem::drop(ref_counted);
     println!("After dropping,  reference count = {}", Rc::strong_count(&cloned_ref));
     println!("rc is at {:p}", cloned_ref);
+
+    // Async Stuff
+
+    use text_os::task::{Task, basic_executor::BasicExecutor};
+    let mut executor = BasicExecutor::new();
+    executor.spawn(Task::new(another_example()));
+    executor.run();
 
     #[cfg(test)]
     test_main();
