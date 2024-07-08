@@ -182,3 +182,13 @@ fn panic(info: &PanicInfo) -> ! {
 fn panic(info: &PanicInfo) -> ! {
     text_os::test_panic_handler(info);
 }
+
+// Some async stuff
+async fn async_number() -> i32 {
+    42
+}
+
+async fn another_example() {
+    let n = async_number().await;
+    println!("Async number: {}", n);
+}
