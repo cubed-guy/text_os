@@ -112,32 +112,35 @@ extern "x86-interrupt" fn timer_interrupt_handler(
 extern "x86-interrupt" fn keyboard_interrupt_handler(
 	_stack_frame: InterruptStackFrame,
 ) {
-	use crate::print;
+	// use crate::print;
 
 	use x86_64::instructions::port::Port;
-	use pc_keyboard::{
-		layouts, DecodedKey, HandleControl, Keyboard, ScancodeSet1
-	};
-	use spin::Mutex;
+	// use pc_keyboard::{
+	// 	layouts, DecodedKey, HandleControl, Keyboard, ScancodeSet1
+	// };
+	// use spin::Mutex;
 
-	lazy_static! {
-		static ref KEYBOARD: Mutex<Keyboard<layouts::Us104Key, ScancodeSet1>> =
-			Mutex::new(Keyboard::new(
-				layouts::Us104Key, ScancodeSet1, HandleControl::Ignore
-			));
-	}
+	// lazy_static! {
+	// 	static ref KEYBOARD: Mutex<Keyboard<layouts::Us104Key, ScancodeSet1>> =
+	// 		Mutex::new(Keyboard::new(
+	// 			layouts::Us104Key, ScancodeSet1, HandleControl::Ignore
+	// 		));
+	// }
 
 	let mut port = Port::new(0x60);  // port of keyboard? port of keyboard.
-	let mut keyboard = KEYBOARD.lock();
 	let scancode: u8 = unsafe { port.read() };
-	if let Ok(Some(key_event)) = keyboard.add_byte(scancode) {
-		if let Some(key) = keyboard.process_keyevent(key_event) {
-			match key {
-				DecodedKey::Unicode(character) => print!("{}", character),
-				DecodedKey::RawKey(key) => print!("{:?}", key),
-			}
-		}
-	}
+	// let mut keyboard = KEYBOARD.lock();
+	// if let Ok(Some(key_event)) = keyboard.add_byte(scancode) {
+	// 	if let Some(key) = keyboard.process_keyevent(key_event) {
+	// 		match key {
+	// 			DecodedKey::Unicode(character) => print!("{}", character),
+	// 			DecodedKey::RawKey(key) => print!("{:?}", key),
+	// 		}
+	// 	}
+	// }
+
+	// handled asynchronously instead -> lower interrupt time
+	crate::task::keyboard::update_scancode_queue(scancode);
 
 	// Notify the PIC (not CPU) to end the interrupt and become available again
 	// ----***  Don't forget to use the correct interrupt index!  ***----
