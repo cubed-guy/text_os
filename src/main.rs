@@ -153,8 +153,10 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
     // Async Stuff
 
     use text_os::task::{Task, basic_executor::BasicExecutor};
+    use text_os::task::keyboard::print_keypresses;
     let mut executor = BasicExecutor::new();
     executor.spawn(Task::new(another_example()));
+    executor.spawn(Task::new(print_keypresses()));
     executor.run();
 
     #[cfg(test)]

@@ -1,3 +1,4 @@
+use core::fmt;
 use core::{future::Future, pin::Pin};
 use alloc::boxed::Box;
 
@@ -17,6 +18,15 @@ impl Task {
 	// private because it must be called only by the *Executor*
 	fn poll(&mut self, context: &mut Context) -> Poll<()> {
 		self.future.as_mut().poll(context)
+	}
+}
+
+impl fmt::Debug for Task {
+	fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+		f
+			.debug_struct("Task")
+			.field("future", &"unknown")
+			.finish()
 	}
 }
 

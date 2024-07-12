@@ -11,21 +11,27 @@ impl BasicExecutor {
 	}
 
 	pub fn spawn(&mut self, task: Task) {
+		use crate::println;
+		println!("Added task to executor, task: {:#?}", task);
 		self.task_queue.push_back(task);
 	}
 
 	pub fn run(&mut self) {
+		use crate::println;
+		println!("Started running tasks.");
+
 		while let Some(mut task) = self.task_queue.pop_front() {
 			use core::task::{Poll, Context};
 			let waker = create_dummy_waker();
 			let mut ctx = Context::from_waker(&waker);
+			// println!("Polling task {:#?}", task);
 			match task.poll(&mut ctx) {
 				Poll::Ready(()) => (),
 				Poll::Pending => self.task_queue.push_back(task),
 			};
 		}
 
-		use crate::println;
+		// use crate::println;
 		println!("Executor completed")
 	}
 }

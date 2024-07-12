@@ -64,3 +64,29 @@ impl Stream for ScancodeStream {
 
 use futures_util::task::AtomicWaker;
 static WAKER: AtomicWaker = AtomicWaker::new();
+
+pub async fn print_keypresses() {
+	let mut stream = ScancodeStream::new();
+	use pc_keyboard::{Keyboard, ScancodeSet1, layouts, HandleControl, DecodedKey};
+	let mut keyboard = Keyboard::new(
+		layouts::Us104Key, ScancodeSet1, HandleControl::Ignore
+	);
+
+	{
+		use crate::println;
+		println!("Async key printer polled for the first time!")
+	}
+
+	use futures_util::StreamExt;
+	while let Some(scancode) = stream.next().await {
+		if let Ok(Some(key_event)) = keyboard.add_byte(scancode) {
+			if let Some(keycode) = keyboard.process_keyevent(key_event) {
+				use crate::print;
+				match keycode {
+					DecodedKey::Unicode(c) => print!("{}", c),
+					DecodedKey::RawKey(c) => print!("{:?}", c),
+				}
+			}
+		}
+	}
+}
