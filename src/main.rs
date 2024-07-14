@@ -74,25 +74,6 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
     unsafe { page_ptr.offset(266).write_volatile(0x_f021_f077_f065_f04e) };
     unsafe { page_ptr.offset(248).write_volatile(0x_f021_f077_f065_f04e) };
 
-
-    // for (i, entry) in mapper.iter().enumerate() {
-    //     if !entry.is_unused() {
-    //         println!("L4 [{:2}] {:?}", i, entry);
-
-    //         use x86_64::structures::paging::PageTable;
-    //         let phys = entry.frame().unwrap().start_address();
-    //         let virt = phys.as_u64() + boot_info.physical_memory_offset;
-    //         let ptr: *mut PageTable = VirtAddr::new(virt).as_mut_ptr();
-    //         let l3_table = unsafe { &*ptr };
-
-    //         for (i, entry) in l3_table.iter().enumerate() {
-    //             if !entry.is_unused() {
-    //                 println!("  L3 [{:2}] {:?}", i, entry);
-    //             }
-    //         }
-    //     }
-    // }
-
     use x86_64::registers::control::Cr3;  // points to the current page table
 
     // (physical frame, flags)
@@ -152,28 +133,18 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
 
     // Async Stuff
 
-    use text_os::task::{Task, basic_executor::BasicExecutor};
-    use text_os::task::keyboard::print_keypresses;
-    let mut executor = BasicExecutor::new();
-    executor.spawn(Task::new(another_example()));
-    executor.spawn(Task::new(print_keypresses()));
-    executor.run();
-
     #[cfg(test)]
     test_main();
 
-    println!("There was an exception maybe? But it didn't crash.");
-    // panic!("Oh noes!");
-    // loop {
-    //     // when an interrupt occurs,
-    //     // the handler will wait for the writer to be unlocked.
-    //     // this thread waits for the interrupt to end.
-    //     // deadlock!
-    //     for _ in 1..1000_000 { }
-    //     print!("-");
-    //     // The SOLUTION? Prevent interrupts when the mutex is locked.
-    // }
-    text_os::hlt_loop();
+    use text_os::task::{Task, better_executor::Executor};
+    let mut executor = Executor::new();
+
+    executor.spawn(Task::new(another_example()));
+
+    use text_os::task::keyboard::print_keypresses;
+    executor.spawn(Task::new(print_keypresses()));
+
+    executor.run();
 }
 
 // specified because no std
