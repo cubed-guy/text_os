@@ -139,6 +139,8 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {  // '!' never returns
     use text_os::task::{Task, better_executor::Executor};
     let mut executor = Executor::new();
 
+    println!("Will sleep when there's nothing to do.");
+
     executor.spawn(Task::new(another_example()));
 
     use text_os::task::keyboard::print_keypresses;
